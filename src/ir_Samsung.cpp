@@ -403,12 +403,14 @@ void IRSamsungAc::sendOn(const uint16_t repeat) {
 
 // Send the special extended "Off" message as the library can't seem to
 // reproduce this message automatically.
-// See: https://github.com/crankyoldgit/IRremoteESP8266/issues/604#issuecomment-475020036
+// See:
+//   https://github.com/crankyoldgit/IRremoteESP8266/issues/604#issuecomment-475020036
+//   https://github.com/crankyoldgit/IRremoteESP8266/issues/1093#issuecomment-622484992
 void IRSamsungAc::sendOff(const uint16_t repeat) {
   const uint8_t extended_state[21] = {
       0x02, 0xB2, 0x0F, 0x00, 0x00, 0x00, 0xC0,
       0x01, 0xD2, 0x0F, 0x00, 0x00, 0x00, 0x00,
-      0x01, 0x02, 0xFF, 0x71, 0x80, 0x11, 0xC0};
+      0x01, 0x12, 0xFF, 0x71, 0x00, 0x11, 0xC0};
   _irsend.sendSamsungAC(extended_state, kSamsungAcExtendedStateLength, repeat);
   _lastsentpowerstate = false;  // Off
 }
