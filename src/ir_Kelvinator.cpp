@@ -1,18 +1,17 @@
 // Copyright 2016 David Conran
 //
-// Code to emulate IR Kelvinator YALIF remote control unit, which should control
-// at least the following Kelvinator A/C units:
-// KSV26CRC, KSV26HRC, KSV35CRC, KSV35HRC, KSV53HRC, KSV62HRC, KSV70CRC,
-// KSV70HRC, KSV80HRC.
-//
-// Note:
-// * Unsupported:
-//    - All Sleep modes.
-//    - All Timer modes.
-//    - "I Feel" button & mode.
-//    - Energy Saving mode.
-//    - Low Heat mode.
-//    - Fahrenheit.
+/// Code to emulate IR Kelvinator YALIF remote control unit, which should
+/// control at least the following Kelvinator A/C units:
+/// KSV26CRC, KSV26HRC, KSV35CRC, KSV35HRC, KSV53HRC, KSV62HRC, KSV70CRC,
+/// KSV70HRC, KSV80HRC.
+///
+/// @note Unsupported:
+///    - All Sleep modes.
+///    - All Timer modes.
+///    - "I Feel" button & mode.
+///    - Energy Saving mode.
+///    - Low Heat mode.
+///    - Fahrenheit.
 
 #include "ir_Kelvinator.h"
 #include <algorithm>
@@ -419,7 +418,7 @@ stdAc::opmode_t IRKelvinatorAC::toCommonMode(const uint8_t mode) {
 }
 
 /// Convert a native fan speed to it's stdAc::fanspeed_t equivalent.
-/// @param[in] mode A native fan speed value.
+/// @param[in] speed A native fan speed value.
 /// @return The stdAc::fanspeed_t equivilant.
 stdAc::fanspeed_t IRKelvinatorAC::toCommonFanSpeed(const uint8_t speed) {
   return (stdAc::fanspeed_t)speed;

@@ -299,6 +299,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5b180d3845b45af38a19b72e6fa8e0c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35dc18f9abbffa8da40816a8a9df1093"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRsend.html#a35dc18f9abbffa8da40816a8a9df1093">sendDelonghiAc</a> (uint64_t data, uint16_t nbits=<a class="el" href="IRremoteESP8266_8h.html#a7b9fba82b602cf38147f0586e037f909">kDelonghiAcBits</a>, uint16_t repeat=<a class="el" href="IRremoteESP8266_8h.html#a8f18256a0a6893e077e253e5e80da164">kDelonghiAcDefaultRepeat</a>)</td></tr>
 <tr class="separator:a35dc18f9abbffa8da40816a8a9df1093"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a9a8247e470975137b37f474bb97639"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRsend.html#a3a9a8247e470975137b37f474bb97639">sendDoshisha</a> (const uint64_t data, uint16_t nbits=<a class="el" href="IRremoteESP8266_8h.html#aedc53534cf6a40144be80abeee498362">kDoshishaBits</a>, const uint16_t repeat=<a class="el" href="IRremoteESP8266_8h.html#a1a49dde7ffbd753f7756cf0c9dc6d826">kNoRepeat</a>)</td></tr>
+<tr class="separator:a3a9a8247e470975137b37f474bb97639"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0522a2256e8358df715065530be6317d"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRsend.html#a0522a2256e8358df715065530be6317d">encodeDoshisha</a> (const uint8_t command, const uint8_t channel=0)</td></tr>
+<tr class="separator:a0522a2256e8358df715065530be6317d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9026d42480b85270e560e122b8be3b6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRsend.html#a9026d42480b85270e560e122b8be3b6c">sendMultibrackets</a> (const uint64_t data, const uint16_t nbits=<a class="el" href="IRremoteESP8266_8h.html#aad7be0971479839493615cafcd654fc1">kMultibracketsBits</a>, const uint16_t repeat=<a class="el" href="IRremoteESP8266_8h.html#a5aa418baefd018d5facc08d3bb721fe9">kMultibracketsDefaultRepeat</a>)</td></tr>
+<tr class="separator:a9026d42480b85270e560e122b8be3b6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -569,6 +575,34 @@ Private Attributes</h2></td></tr>
           <td></td>
           <td class="paramtype">uint8_t&#160;</td>
           <td class="paramname"><em>duty</em> = <code><a class="el" href="IRsend_8h.html#affa33c170fe058b783372852fca7cc5b">kDutyDefault</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0522a2256e8358df715065530be6317d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0522a2256e8358df715065530be6317d">&#9670;&nbsp;</a></span>encodeDoshisha()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t IRsend::encodeDoshisha </td>
+          <td>(</td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>command</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>channel</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1797,6 +1831,40 @@ Private Attributes</h2></td></tr>
           <td></td>
           <td class="paramtype">uint16_t&#160;</td>
           <td class="paramname"><em>repeat</em> = <code><a class="el" href="IRremoteESP8266_8h.html#a5c2263819b032e3af4d416ab41126bd8">kDishMinRepeat</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3a9a8247e470975137b37f474bb97639"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a9a8247e470975137b37f474bb97639">&#9670;&nbsp;</a></span>sendDoshisha()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IRsend::sendDoshisha </td>
+          <td>(</td>
+          <td class="paramtype">const uint64_t&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>nbits</em> = <code><a class="el" href="IRremoteESP8266_8h.html#aedc53534cf6a40144be80abeee498362">kDoshishaBits</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint16_t&#160;</td>
+          <td class="paramname"><em>repeat</em> = <code><a class="el" href="IRremoteESP8266_8h.html#a1a49dde7ffbd753f7756cf0c9dc6d826">kNoRepeat</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -3340,6 +3408,40 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a9026d42480b85270e560e122b8be3b6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9026d42480b85270e560e122b8be3b6c">&#9670;&nbsp;</a></span>sendMultibrackets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IRsend::sendMultibrackets </td>
+          <td>(</td>
+          <td class="paramtype">const uint64_t&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint16_t&#160;</td>
+          <td class="paramname"><em>nbits</em> = <code><a class="el" href="IRremoteESP8266_8h.html#aad7be0971479839493615cafcd654fc1">kMultibracketsBits</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint16_t&#160;</td>
+          <td class="paramname"><em>repeat</em> = <code><a class="el" href="IRremoteESP8266_8h.html#a5aa418baefd018d5facc08d3bb721fe9">kMultibracketsDefaultRepeat</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a98301801daf929ec8ce022987ae394f2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a98301801daf929ec8ce022987ae394f2">&#9670;&nbsp;</a></span>sendMWM()</h2>
 
@@ -4681,6 +4783,7 @@ Private Attributes</h2></td></tr>
 <li>src/<a class="el" href="ir__Delonghi_8cpp.html">ir_Delonghi.cpp</a></li>
 <li>src/<a class="el" href="ir__Denon_8cpp.html">ir_Denon.cpp</a></li>
 <li>src/<a class="el" href="ir__Dish_8cpp.html">ir_Dish.cpp</a></li>
+<li>src/<a class="el" href="ir__Doshisha_8cpp.html">ir_Doshisha.cpp</a></li>
 <li>src/<a class="el" href="ir__Electra_8cpp.html">ir_Electra.cpp</a></li>
 <li>src/<a class="el" href="ir__Epson_8cpp.html">ir_Epson.cpp</a></li>
 <li>src/<a class="el" href="ir__Fujitsu_8cpp.html">ir_Fujitsu.cpp</a></li>
@@ -4701,6 +4804,7 @@ Private Attributes</h2></td></tr>
 <li>src/<a class="el" href="ir__Midea_8cpp.html">ir_Midea.cpp</a></li>
 <li>src/<a class="el" href="ir__Mitsubishi_8cpp.html">ir_Mitsubishi.cpp</a></li>
 <li>src/<a class="el" href="ir__MitsubishiHeavy_8cpp.html">ir_MitsubishiHeavy.cpp</a></li>
+<li>src/<a class="el" href="ir__Multibrackets_8cpp.html">ir_Multibrackets.cpp</a></li>
 <li>src/<a class="el" href="ir__MWM_8cpp.html">ir_MWM.cpp</a></li>
 <li>src/<a class="el" href="ir__NEC_8cpp.html">ir_NEC.cpp</a></li>
 <li>src/<a class="el" href="ir__Neoclima_8cpp.html">ir_Neoclima.cpp</a></li>

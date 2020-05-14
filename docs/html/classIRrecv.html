@@ -71,77 +71,110 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Class for receiving IR messages.  
+ <a href="classIRrecv.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="IRrecv_8h_source.html">IRrecv.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for IRrecv:</div>
 <div class="dyncontent">
 <div class="center"><img src="classIRrecv__coll__graph.png" border="0" usemap="#IRrecv_coll__map" alt="Collaboration graph"/></div>
 <map name="IRrecv_coll__map" id="IRrecv_coll__map">
-<area shape="rect" title=" " alt="" coords="20,95,83,121"/>
-<area shape="rect" href="structirparams__t.html" title=" " alt="" coords="5,5,97,32"/>
+<area shape="rect" title="Class for receiving IR messages." alt="" coords="20,95,83,121"/>
+<area shape="rect" href="structirparams__t.html" title="Information for the interrupt handler." alt="" coords="5,5,97,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8fe4d26ef1f863db1db9994fed5fc209"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRrecv.html#a8fe4d26ef1f863db1db9994fed5fc209">IRrecv</a> (const uint16_t recvpin, const uint16_t bufsize=<a class="el" href="IRrecv_8h.html#aadfa37def10a1adeaf2cf4c09d7504e3">kRawBuf</a>, const uint8_t timeout=<a class="el" href="IRrecv_8h.html#ad37e9659aaef29c541802d9759e0ab7b">kTimeoutMs</a>, const bool save_buffer=false, const uint8_t timer_num=<a class="el" href="IRrecv_8h.html#a80a2d3445a1752d18caf307d7677b709">kDefaultESP32Timer</a>)</td></tr>
+<tr class="memdesc:a8fe4d26ef1f863db1db9994fed5fc209"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class constructor Args:  <a href="classIRrecv.html#a8fe4d26ef1f863db1db9994fed5fc209">More...</a><br /></td></tr>
 <tr class="separator:a8fe4d26ef1f863db1db9994fed5fc209"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3bb1bcc1c1a3184294dd35c8f6f758b1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRrecv.html#a3bb1bcc1c1a3184294dd35c8f6f758b1">IRrecv</a> (const uint16_t recvpin, const uint16_t bufsize=<a class="el" href="IRrecv_8h.html#aadfa37def10a1adeaf2cf4c09d7504e3">kRawBuf</a>, const uint8_t timeout=<a class="el" href="IRrecv_8h.html#ad37e9659aaef29c541802d9759e0ab7b">kTimeoutMs</a>, const bool save_buffer=false)</td></tr>
 <tr class="separator:a3bb1bcc1c1a3184294dd35c8f6f758b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87d4cca5e350177cb0922842dda1eb5b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRrecv.html#a87d4cca5e350177cb0922842dda1eb5b">~IRrecv</a> (void)</td></tr>
+<tr class="memdesc:a87d4cca5e350177cb0922842dda1eb5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class destructor Cleans up after the object is no longer needed. e.g. Frees up all memory used by the various buffers, and disables any timers or interrupts used.  <a href="classIRrecv.html#a87d4cca5e350177cb0922842dda1eb5b">More...</a><br /></td></tr>
 <tr class="separator:a87d4cca5e350177cb0922842dda1eb5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa091c449db70c65fd0221669df7438ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRrecv.html#aa091c449db70c65fd0221669df7438ea">setTolerance</a> (const uint8_t percent=<a class="el" href="IRrecv_8h.html#a7884008b3a738dfc7bd8658655e10272">kTolerance</a>)</td></tr>
+<tr class="memdesc:aa091c449db70c65fd0221669df7438ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the base tolerance percentage for matching incoming IR messages.  <a href="classIRrecv.html#aa091c449db70c65fd0221669df7438ea">More...</a><br /></td></tr>
 <tr class="separator:aa091c449db70c65fd0221669df7438ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a144f64da3b44708394c06b0fbefb6347"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRrecv.html#a144f64da3b44708394c06b0fbefb6347">getTolerance</a> (void)</td></tr>
+<tr class="memdesc:a144f64da3b44708394c06b0fbefb6347"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the base tolerance percentage for matching incoming IR messages.  <a href="classIRrecv.html#a144f64da3b44708394c06b0fbefb6347">More...</a><br /></td></tr>
 <tr class="separator:a144f64da3b44708394c06b0fbefb6347"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeaa5c07a8b46f8fbb982f996cc1f9f4b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRrecv.html#aeaa5c07a8b46f8fbb982f996cc1f9f4b">decode</a> (<a class="el" href="classdecode__results.html">decode_results</a> *results, <a class="el" href="structirparams__t.html">irparams_t</a> *save=NULL, uint8_t max_skip=0, uint16_t noise_floor=0)</td></tr>
+<tr class="memdesc:aeaa5c07a8b46f8fbb982f996cc1f9f4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decodes the received IR message. If the interrupt state is saved, we will immediately resume waiting for the next IR message to avoid missing messages.  <a href="classIRrecv.html#aeaa5c07a8b46f8fbb982f996cc1f9f4b">More...</a><br /></td></tr>
 <tr class="separator:aeaa5c07a8b46f8fbb982f996cc1f9f4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52c05ec6d8f3dbfb75f21f3b4fe7be3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRrecv.html#a52c05ec6d8f3dbfb75f21f3b4fe7be3d">enableIRIn</a> (const bool pullup=false)</td></tr>
+<tr class="memdesc:a52c05ec6d8f3dbfb75f21f3b4fe7be3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set up and (re)start the IR capture mechanism.  <a href="classIRrecv.html#a52c05ec6d8f3dbfb75f21f3b4fe7be3d">More...</a><br /></td></tr>
 <tr class="separator:a52c05ec6d8f3dbfb75f21f3b4fe7be3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f4a719e756ad78c7dd47186f8bef087"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRrecv.html#a9f4a719e756ad78c7dd47186f8bef087">disableIRIn</a> (void)</td></tr>
+<tr class="memdesc:a9f4a719e756ad78c7dd47186f8bef087"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop collection of any received IR data. Disable any timers and interrupts.  <a href="classIRrecv.html#a9f4a719e756ad78c7dd47186f8bef087">More...</a><br /></td></tr>
 <tr class="separator:a9f4a719e756ad78c7dd47186f8bef087"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b5beb7348d807d8d98ae929d005510e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRrecv.html#a6b5beb7348d807d8d98ae929d005510e">resume</a> (void)</td></tr>
+<tr class="memdesc:a6b5beb7348d807d8d98ae929d005510e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resume collection of received IR data.  <a href="classIRrecv.html#a6b5beb7348d807d8d98ae929d005510e">More...</a><br /></td></tr>
 <tr class="separator:a6b5beb7348d807d8d98ae929d005510e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69ab02ea6823ccf18d1f6be87ca1b92e"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRrecv.html#a69ab02ea6823ccf18d1f6be87ca1b92e">getBufSize</a> (void)</td></tr>
+<tr class="memdesc:a69ab02ea6823ccf18d1f6be87ca1b92e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain the maximum number of entries possible in the capture buffer. i.e. It's size.  <a href="classIRrecv.html#a69ab02ea6823ccf18d1f6be87ca1b92e">More...</a><br /></td></tr>
 <tr class="separator:a69ab02ea6823ccf18d1f6be87ca1b92e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02693553aad1decd67bdae60402e48bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRrecv.html#a02693553aad1decd67bdae60402e48bf">setUnknownThreshold</a> (const uint16_t length)</td></tr>
+<tr class="memdesc:a02693553aad1decd67bdae60402e48bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the minimum length we will consider for reporting UNKNOWN message types.  <a href="classIRrecv.html#a02693553aad1decd67bdae60402e48bf">More...</a><br /></td></tr>
 <tr class="separator:a02693553aad1decd67bdae60402e48bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8bc218dae714ab189a3da4fff269cdaa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRrecv.html#a8bc218dae714ab189a3da4fff269cdaa">match</a> (const uint32_t measured, const uint32_t desired, const uint8_t tolerance=<a class="el" href="IRrecv_8h.html#a05025e8bd724ae2d0c7fea6e924ca84c">kUseDefTol</a>, const uint16_t delta=0)</td></tr>
+<tr class="memdesc:a8bc218dae714ab189a3da4fff269cdaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if we match a pulse(measured) with the desired within +/-tolerance percent and/or +/- a fixed delta range.  <a href="classIRrecv.html#a8bc218dae714ab189a3da4fff269cdaa">More...</a><br /></td></tr>
 <tr class="separator:a8bc218dae714ab189a3da4fff269cdaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae78ef12b8194db5d3cb5a2605d29830d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRrecv.html#ae78ef12b8194db5d3cb5a2605d29830d">matchMark</a> (const uint32_t measured, const uint32_t desired, const uint8_t tolerance=<a class="el" href="IRrecv_8h.html#a05025e8bd724ae2d0c7fea6e924ca84c">kUseDefTol</a>, const int16_t excess=<a class="el" href="IRrecv_8h.html#a99bbffe986ad7ba86d2b11e75f4aa50e">kMarkExcess</a>)</td></tr>
+<tr class="memdesc:ae78ef12b8194db5d3cb5a2605d29830d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if we match a mark signal(measured) with the desired within +/-tolerance percent, after an expected is excess is added.  <a href="classIRrecv.html#ae78ef12b8194db5d3cb5a2605d29830d">More...</a><br /></td></tr>
 <tr class="separator:ae78ef12b8194db5d3cb5a2605d29830d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9fd363e8b2edee2ed3c473349ecc58fc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRrecv.html#a9fd363e8b2edee2ed3c473349ecc58fc">matchSpace</a> (const uint32_t measured, const uint32_t desired, const uint8_t tolerance=<a class="el" href="IRrecv_8h.html#a05025e8bd724ae2d0c7fea6e924ca84c">kUseDefTol</a>, const int16_t excess=<a class="el" href="IRrecv_8h.html#a99bbffe986ad7ba86d2b11e75f4aa50e">kMarkExcess</a>)</td></tr>
+<tr class="memdesc:a9fd363e8b2edee2ed3c473349ecc58fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if we match a space signal(measured) with the desired within +/-tolerance percent, after an expected is excess is removed.  <a href="classIRrecv.html#a9fd363e8b2edee2ed3c473349ecc58fc">More...</a><br /></td></tr>
 <tr class="separator:a9fd363e8b2edee2ed3c473349ecc58fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a0b4221970de0d027b5ae99648fa1c003"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRrecv.html#a0b4221970de0d027b5ae99648fa1c003">_validTolerance</a> (const uint8_t percentage)</td></tr>
+<tr class="memdesc:a0b4221970de0d027b5ae99648fa1c003"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert the tolerance percentage into something valid.  <a href="classIRrecv.html#a0b4221970de0d027b5ae99648fa1c003">More...</a><br /></td></tr>
 <tr class="separator:a0b4221970de0d027b5ae99648fa1c003"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab017a0f9256954bb7d943e3c6b7e31bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRrecv.html#ab017a0f9256954bb7d943e3c6b7e31bf">copyIrParams</a> (volatile <a class="el" href="structirparams__t.html">irparams_t</a> *src, <a class="el" href="structirparams__t.html">irparams_t</a> *dst)</td></tr>
+<tr class="memdesc:ab017a0f9256954bb7d943e3c6b7e31bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a copy of the interrupt state &amp; buffer data. Needed because irparams is marked as volatile, thus memcpy() isn't allowed. Only call this when you know the interrupt handlers won't modify anything. i.e. In kStopState.  <a href="classIRrecv.html#ab017a0f9256954bb7d943e3c6b7e31bf">More...</a><br /></td></tr>
 <tr class="separator:ab017a0f9256954bb7d943e3c6b7e31bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7347c72b14d9f2f20f65bcf235ab3dc"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRrecv.html#ad7347c72b14d9f2f20f65bcf235ab3dc">compare</a> (const uint16_t oldval, const uint16_t newval)</td></tr>
+<tr class="memdesc:ad7347c72b14d9f2f20f65bcf235ab3dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare two tick values.  <a href="classIRrecv.html#ad7347c72b14d9f2f20f65bcf235ab3dc">More...</a><br /></td></tr>
 <tr class="separator:ad7347c72b14d9f2f20f65bcf235ab3dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac08e50c5eec10c0095157f4bdd4051c8"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRrecv.html#ac08e50c5eec10c0095157f4bdd4051c8">ticksLow</a> (const uint32_t usecs, const uint8_t tolerance=<a class="el" href="IRrecv_8h.html#a05025e8bd724ae2d0c7fea6e924ca84c">kUseDefTol</a>, const uint16_t delta=0)</td></tr>
+<tr class="memdesc:ac08e50c5eec10c0095157f4bdd4051c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the lower bound of the nr. of ticks.  <a href="classIRrecv.html#ac08e50c5eec10c0095157f4bdd4051c8">More...</a><br /></td></tr>
 <tr class="separator:ac08e50c5eec10c0095157f4bdd4051c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a573dbb20695f2ffc808623df8c36280c"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRrecv.html#a573dbb20695f2ffc808623df8c36280c">ticksHigh</a> (const uint32_t usecs, const uint8_t tolerance=<a class="el" href="IRrecv_8h.html#a05025e8bd724ae2d0c7fea6e924ca84c">kUseDefTol</a>, const uint16_t delta=0)</td></tr>
+<tr class="memdesc:a573dbb20695f2ffc808623df8c36280c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the upper bound of the nr. of ticks.  <a href="classIRrecv.html#a573dbb20695f2ffc808623df8c36280c">More...</a><br /></td></tr>
 <tr class="separator:a573dbb20695f2ffc808623df8c36280c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7bfd4ff689c7563c65c4e6e8c58187a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRrecv.html#ae7bfd4ff689c7563c65c4e6e8c58187a">matchAtLeast</a> (const uint32_t measured, const uint32_t desired, const uint8_t tolerance=<a class="el" href="IRrecv_8h.html#a05025e8bd724ae2d0c7fea6e924ca84c">kUseDefTol</a>, const uint16_t delta=0)</td></tr>
+<tr class="memdesc:ae7bfd4ff689c7563c65c4e6e8c58187a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if we match a pulse(measured) of at least desired within tolerance percent and/or a fixed delta margin.  <a href="classIRrecv.html#ae7bfd4ff689c7563c65c4e6e8c58187a">More...</a><br /></td></tr>
 <tr class="separator:ae7bfd4ff689c7563c65c4e6e8c58187a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0b300fe6fdff58324525e8208be3024"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRrecv.html#af0b300fe6fdff58324525e8208be3024">_matchGeneric</a> (volatile uint16_t *data_ptr, uint64_t *result_bits_ptr, uint8_t *result_ptr, const bool use_bits, const uint16_t remaining, const uint16_t required, const uint16_t hdrmark, const uint32_t hdrspace, const uint16_t onemark, const uint32_t onespace, const uint16_t zeromark, const uint32_t zerospace, const uint16_t footermark, const uint32_t footerspace, const bool atleast=false, const uint8_t tolerance=<a class="el" href="IRrecv_8h.html#a05025e8bd724ae2d0c7fea6e924ca84c">kUseDefTol</a>, const int16_t excess=<a class="el" href="IRrecv_8h.html#a99bbffe986ad7ba86d2b11e75f4aa50e">kMarkExcess</a>, const bool MSBfirst=true)</td></tr>
+<tr class="memdesc:af0b300fe6fdff58324525e8208be3024"><td class="mdescLeft">&#160;</td><td class="mdescRight">Match &amp; decode a generic/typical IR message. The data is stored in result_bits_ptr or result_bytes_ptr depending on flag <code>use_bits</code>.  <a href="classIRrecv.html#af0b300fe6fdff58324525e8208be3024">More...</a><br /></td></tr>
 <tr class="separator:af0b300fe6fdff58324525e8208be3024"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5361439cb69b1069553544e486502d2e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmatch__result__t.html">match_result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRrecv.html#a5361439cb69b1069553544e486502d2e">matchData</a> (volatile uint16_t *data_ptr, const uint16_t nbits, const uint16_t onemark, const uint32_t onespace, const uint16_t zeromark, const uint32_t zerospace, const uint8_t tolerance=<a class="el" href="IRrecv_8h.html#a05025e8bd724ae2d0c7fea6e924ca84c">kUseDefTol</a>, const int16_t excess=<a class="el" href="IRrecv_8h.html#a99bbffe986ad7ba86d2b11e75f4aa50e">kMarkExcess</a>, const bool MSBfirst=true)</td></tr>
+<tr class="memdesc:a5361439cb69b1069553544e486502d2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Match &amp; decode the typical data section of an IR message. The data value is stored in the least significant bits reguardless of the bit ordering requested.  <a href="classIRrecv.html#a5361439cb69b1069553544e486502d2e">More...</a><br /></td></tr>
 <tr class="separator:a5361439cb69b1069553544e486502d2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc2c9bc4c4e5741cfac7468126bf8ca6"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRrecv.html#adc2c9bc4c4e5741cfac7468126bf8ca6">matchBytes</a> (volatile uint16_t *data_ptr, uint8_t *result_ptr, const uint16_t remaining, const uint16_t nbytes, const uint16_t onemark, const uint32_t onespace, const uint16_t zeromark, const uint32_t zerospace, const uint8_t tolerance=<a class="el" href="IRrecv_8h.html#a05025e8bd724ae2d0c7fea6e924ca84c">kUseDefTol</a>, const int16_t excess=<a class="el" href="IRrecv_8h.html#a99bbffe986ad7ba86d2b11e75f4aa50e">kMarkExcess</a>, const bool MSBfirst=true)</td></tr>
+<tr class="memdesc:adc2c9bc4c4e5741cfac7468126bf8ca6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Match &amp; decode the typical data section of an IR message. The bytes are stored at result_ptr. The first byte in the result equates to the first byte encountered, and so on.  <a href="classIRrecv.html#adc2c9bc4c4e5741cfac7468126bf8ca6">More...</a><br /></td></tr>
 <tr class="separator:adc2c9bc4c4e5741cfac7468126bf8ca6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab783f52acc2ff4052313d6947563e4fd"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRrecv.html#ab783f52acc2ff4052313d6947563e4fd">matchGeneric</a> (volatile uint16_t *data_ptr, uint64_t *result_ptr, const uint16_t remaining, const uint16_t nbits, const uint16_t hdrmark, const uint32_t hdrspace, const uint16_t onemark, const uint32_t onespace, const uint16_t zeromark, const uint32_t zerospace, const uint16_t footermark, const uint32_t footerspace, const bool atleast=false, const uint8_t tolerance=<a class="el" href="IRrecv_8h.html#a05025e8bd724ae2d0c7fea6e924ca84c">kUseDefTol</a>, const int16_t excess=<a class="el" href="IRrecv_8h.html#a99bbffe986ad7ba86d2b11e75f4aa50e">kMarkExcess</a>, const bool MSBfirst=true)</td></tr>
+<tr class="memdesc:ab783f52acc2ff4052313d6947563e4fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Match &amp; decode a generic/typical &lt;= 64bit IR message. The data is stored at result_ptr.  <a href="classIRrecv.html#ab783f52acc2ff4052313d6947563e4fd">More...</a><br /></td></tr>
 <tr class="separator:ab783f52acc2ff4052313d6947563e4fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4448c1658383962d735353352987c9aa"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRrecv.html#a4448c1658383962d735353352987c9aa">matchGeneric</a> (volatile uint16_t *data_ptr, uint8_t *result_ptr, const uint16_t remaining, const uint16_t nbits, const uint16_t hdrmark, const uint32_t hdrspace, const uint16_t onemark, const uint32_t onespace, const uint16_t zeromark, const uint32_t zerospace, const uint16_t footermark, const uint32_t footerspace, const bool atleast=false, const uint8_t tolerance=<a class="el" href="IRrecv_8h.html#a05025e8bd724ae2d0c7fea6e924ca84c">kUseDefTol</a>, const int16_t excess=<a class="el" href="IRrecv_8h.html#a99bbffe986ad7ba86d2b11e75f4aa50e">kMarkExcess</a>, const bool MSBfirst=true)</td></tr>
+<tr class="memdesc:a4448c1658383962d735353352987c9aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Match &amp; decode a generic/typical &gt; 64bit IR message. The bytes are stored at result_ptr. The first byte in the result equates to the first byte encountered, and so on.  <a href="classIRrecv.html#a4448c1658383962d735353352987c9aa">More...</a><br /></td></tr>
 <tr class="separator:a4448c1658383962d735353352987c9aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4582d75ef1d11aee35fce86c38dcccf0"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRrecv.html#a4582d75ef1d11aee35fce86c38dcccf0">matchGenericConstBitTime</a> (volatile uint16_t *data_ptr, uint64_t *result_ptr, const uint16_t remaining, const uint16_t nbits, const uint16_t hdrmark, const uint32_t hdrspace, const uint16_t one, const uint32_t zero, const uint16_t footermark, const uint32_t footerspace, const bool atleast=false, const uint8_t tolerance=<a class="el" href="IRrecv_8h.html#a05025e8bd724ae2d0c7fea6e924ca84c">kUseDefTol</a>, const int16_t excess=<a class="el" href="IRrecv_8h.html#a99bbffe986ad7ba86d2b11e75f4aa50e">kMarkExcess</a>, const bool MSBfirst=true)</td></tr>
+<tr class="memdesc:a4582d75ef1d11aee35fce86c38dcccf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Match &amp; decode a generic/typical constant bit time &lt;= 64bit IR message. The data is stored at result_ptr.  <a href="classIRrecv.html#a4582d75ef1d11aee35fce86c38dcccf0">More...</a><br /></td></tr>
+<tr class="separator:a4582d75ef1d11aee35fce86c38dcccf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade70777ad0e047e11b99b03d8f5e3728"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRrecv.html#ade70777ad0e047e11b99b03d8f5e3728">matchManchester</a> (volatile const uint16_t *data_ptr, uint64_t *result_ptr, const uint16_t remaining, const uint16_t nbits, const uint16_t hdrmark, const uint32_t hdrspace, const uint16_t clock_period, const uint16_t footermark, const uint32_t footerspace, const bool atleast=false, const uint8_t tolerance=<a class="el" href="IRrecv_8h.html#a05025e8bd724ae2d0c7fea6e924ca84c">kUseDefTol</a>, const int16_t excess=<a class="el" href="IRrecv_8h.html#a99bbffe986ad7ba86d2b11e75f4aa50e">kMarkExcess</a>, const bool MSBfirst=true, const bool GEThomas=true)</td></tr>
+<tr class="memdesc:ade70777ad0e047e11b99b03d8f5e3728"><td class="mdescLeft">&#160;</td><td class="mdescRight">Match &amp; decode a Manchester Code &lt;= 64bit IR message. The data is stored at result_ptr.  <a href="classIRrecv.html#ade70777ad0e047e11b99b03d8f5e3728">More...</a><br /></td></tr>
 <tr class="separator:ade70777ad0e047e11b99b03d8f5e3728"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae833bdb8fccc676043fc4ccae432fab1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRrecv.html#ae833bdb8fccc676043fc4ccae432fab1">crudeNoiseFilter</a> (<a class="el" href="classdecode__results.html">decode_results</a> *results, const uint16_t floor=0)</td></tr>
+<tr class="memdesc:ae833bdb8fccc676043fc4ccae432fab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove or merge pulses in the capture buffer that are too short.  <a href="classIRrecv.html#ae833bdb8fccc676043fc4ccae432fab1">More...</a><br /></td></tr>
 <tr class="separator:ae833bdb8fccc676043fc4ccae432fab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c15fbfa7936ca474712a1953911fd06"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRrecv.html#a7c15fbfa7936ca474712a1953911fd06">decodeHash</a> (<a class="el" href="classdecode__results.html">decode_results</a> *results)</td></tr>
+<tr class="memdesc:a7c15fbfa7936ca474712a1953911fd06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decode any arbitrary IR message into a 32-bit code value. Instead of decoding using a standard encoding scheme (e.g. Sony, NEC, RC5), the code is hashed to a 32-bit value.  <a href="classIRrecv.html#a7c15fbfa7936ca474712a1953911fd06">More...</a><br /></td></tr>
 <tr class="separator:a7c15fbfa7936ca474712a1953911fd06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52b844f80df7f64edf9ce9cc189ac5b9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRrecv.html#a52b844f80df7f64edf9ce9cc189ac5b9">decodeNEC</a> (<a class="el" href="classdecode__results.html">decode_results</a> *results, uint16_t offset=<a class="el" href="IRrecv_8h.html#a44a836a34428f8f75b1ae566de4bb972">kStartOffset</a>, const uint16_t nbits=<a class="el" href="IRremoteESP8266_8h.html#a65e03baf646815b4b02f943bdd74a097">kNECBits</a>, const bool strict=true)</td></tr>
 <tr class="separator:a52b844f80df7f64edf9ce9cc189ac5b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -282,6 +315,10 @@ Private Member Functions</h2></td></tr>
 <tr class="separator:acf4635d5ee146a82498cb0c269b6af41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c91cc83770d243e942387cc16e9ca6f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRrecv.html#a8c91cc83770d243e942387cc16e9ca6f">decodeDelonghiAc</a> (<a class="el" href="classdecode__results.html">decode_results</a> *results, uint16_t offset=<a class="el" href="IRrecv_8h.html#a44a836a34428f8f75b1ae566de4bb972">kStartOffset</a>, const uint16_t nbits=<a class="el" href="IRremoteESP8266_8h.html#a7b9fba82b602cf38147f0586e037f909">kDelonghiAcBits</a>, const bool strict=true)</td></tr>
 <tr class="separator:a8c91cc83770d243e942387cc16e9ca6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a675c45e6b32aaeca3de734ccf2f0c819"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRrecv.html#a675c45e6b32aaeca3de734ccf2f0c819">decodeDoshisha</a> (<a class="el" href="classdecode__results.html">decode_results</a> *results, uint16_t offset=<a class="el" href="IRrecv_8h.html#a44a836a34428f8f75b1ae566de4bb972">kStartOffset</a>, const uint16_t nbits=<a class="el" href="IRremoteESP8266_8h.html#aedc53534cf6a40144be80abeee498362">kDoshishaBits</a>, const bool strict=true)</td></tr>
+<tr class="separator:a675c45e6b32aaeca3de734ccf2f0c819"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af61afacc9865232643164ba824e665ab"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRrecv.html#af61afacc9865232643164ba824e665ab">decodeMultibrackets</a> (<a class="el" href="classdecode__results.html">decode_results</a> *results, uint16_t offset=<a class="el" href="IRrecv_8h.html#a44a836a34428f8f75b1ae566de4bb972">kStartOffset</a>, const uint16_t nbits=<a class="el" href="IRremoteESP8266_8h.html#aad7be0971479839493615cafcd654fc1">kMultibracketsBits</a>, const bool strict=true)</td></tr>
+<tr class="separator:af61afacc9865232643164ba824e665ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -294,7 +331,9 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:adb8cbc5c1cb739f33f5be25b3a6c79bd"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRrecv.html#adb8cbc5c1cb739f33f5be25b3a6c79bd">_unknown_threshold</a></td></tr>
 <tr class="separator:adb8cbc5c1cb739f33f5be25b3a6c79bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class for receiving IR messages. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8fe4d26ef1f863db1db9994fed5fc209"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8fe4d26ef1f863db1db9994fed5fc209">&#9670;&nbsp;</a></span>IRrecv() <span class="overload">[1/2]</span></h2>
 
@@ -346,6 +385,18 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Class constructor Args: </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">recvpin</td><td>The GPIO pin the IR receiver module's data pin is connected to. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bufsize</td><td>Nr. of entries to have in the capture buffer. (Default: kRawBuf) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">timeout</td><td>Nr. of milli-Seconds of no signal before we stop capturing data. (Default: kTimeoutMs) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">save_buffer</td><td>Use a second (save) buffer to decode from. (Default: false) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An <a class="el" href="classIRrecv.html" title="Class for receiving IR messages.">IRrecv</a> class object. </dd></dl>
 
 </div>
 </div>
@@ -413,6 +464,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Class destructor Cleans up after the object is no longer needed. e.g. Frees up all memory used by the various buffers, and disables any timers or interrupts used. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -441,7 +494,7 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint8_t *&#160;</td>
-          <td class="paramname"><em>result_ptr</em>, </td>
+          <td class="paramname"><em>result_bytes_ptr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -459,7 +512,7 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const uint16_t&#160;</td>
-          <td class="paramname"><em>required</em>, </td>
+          <td class="paramname"><em>nbits</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -546,6 +599,33 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Match &amp; decode a generic/typical IR message. The data is stored in result_bits_ptr or result_bytes_ptr depending on flag <code>use_bits</code>. </p>
+<dl class="section note"><dt>Note</dt><dd>Values of 0 for hdrmark, hdrspace, footermark, or footerspace mean skip that requirement.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">data_ptr</td><td>A pointer to where we are at in the capture buffer. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">result_bits_ptr</td><td>A pointer to where to start storing the bits we decoded. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">result_bytes_ptr</td><td>A pointer to where to start storing the bytes we decoded. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">use_bits</td><td>A flag indicating if we are to decode bits or bytes. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">remaining</td><td>The size of the capture buffer remaining. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nbits</td><td>Nr. of data bits we expect. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hdrmark</td><td>Nr. of uSeconds for the expected header mark signal. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hdrspace</td><td>Nr. of uSeconds for the expected header space signal. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">onemark</td><td>Nr. of uSeconds in an expected mark signal for a '1' bit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">onespace</td><td>Nr. of uSecs in an expected space signal for a '1' bit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">zeromark</td><td>Nr. of uSecs in an expected mark signal for a '0' bit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">zerospace</td><td>Nr. of uSecs in an expected space signal for a '0' bit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">footermark</td><td>Nr. of uSeconds for the expected footer mark signal. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">footerspace</td><td>Nr. of uSeconds for the expected footer space/gap signal. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">atleast</td><td>Is the match on the footerspace a matchAtLeast or matchSpace? </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tolerance</td><td>Percentage error margin to allow. (Default: kUseDefTol) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">excess</td><td>Nr. of uSeconds. (Def: kMarkExcess) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">MSBfirst</td><td>Bit order to save the data in. (Def: true) true is Most Significant Bit First Order, false is Least Significant First </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If successful, how many buffer entries were used. Otherwise 0. </dd></dl>
+
 </div>
 </div>
 <a id="a0b4221970de0d027b5ae99648fa1c003"></a>
@@ -571,6 +651,14 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Convert the tolerance percentage into something valid. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">percentage</td><td>An integer percentage. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -608,6 +696,16 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Compare two tick values. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">oldval</td><td>Nr. of ticks. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if newval is shorter, 1 if it is equal, &amp; 2 if it is longer. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Use a tolerance of 20% </dd></dl>
+
 </div>
 </div>
 <a id="ab017a0f9256954bb7d943e3c6b7e31bf"></a>
@@ -644,6 +742,15 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Make a copy of the interrupt state &amp; buffer data. Needed because irparams is marked as volatile, thus memcpy() isn't allowed. Only call this when you know the interrupt handlers won't modify anything. i.e. In kStopState. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">src</td><td>Pointer to an <a class="el" href="structirparams__t.html" title="Information for the interrupt handler.">irparams_t</a> structure to copy from. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">dst</td><td>Pointer to an <a class="el" href="structirparams__t.html" title="Information for the interrupt handler.">irparams_t</a> structure to copy to. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="ae833bdb8fccc676043fc4ccae432fab1"></a>
@@ -679,6 +786,14 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Remove or merge pulses in the capture buffer that are too short. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">results</td><td>Ptr to the <a class="el" href="classdecode__results.html" title="Results returned from the decoder.">decode_results</a> we are going to filter. @floor[in] Only allow values in the buffer large than this. (micro seconds) </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -719,6 +834,26 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Decodes the received IR message. If the interrupt state is saved, we will immediately resume waiting for the next IR message to avoid missing messages. </p>
+<dl class="section note"><dt>Note</dt><dd>There is a trade-off here. Saving the state means less time lost until we can receiving the next message vs. using more RAM. Choose appropriately. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">results</td><td>A PTR to where the decoded IR message will be stored. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">save</td><td>A PTR to an <a class="el" href="structirparams__t.html" title="Information for the interrupt handler.">irparams_t</a> instance in which to save the interrupt's memory/state. NULL means don't save it. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">max_skip</td><td>Maximum Nr. of pulses at the begining of a capture we can skip when attempting to find a protocol we can successfully decode. This parameter can dramatically improve detection of protocols when there is light IR interference just before an incoming IR message, however, it comes at a steep performace price. (Default is 0. No skipping.) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>Increasing the <code>max_skip</code> value will dramatically (linearly) increase the cpu time &amp; usage to decode protocols. e.g. 0 -&gt; 1 will be a 2x increase in cpu usage/time. 0 -&gt; 2 will be a 3x increase etc. If you are going to do this, consider disabling protocol decoding for protocols you are not expecting. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">noise_floor</td><td>Pulses below this size (in usecs) will be removed or merged prior to any decoding. This is to try to remove noise/poor readings &amp; slighly increase the chances of a successful decode but at the cost of data fidelity &amp; integrity. (Defaults to 0 usecs. i.e. Don't filter; which is safe!) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>DANGER: <b>Here Be Dragons!</b> If you set the <code>noise_floor</code> value too high, it <b>WILL</b> break decoding of some protocols. You have been warned! <b>Any</b> non-zero value has the potential to <b>cook</b> the captured raw data i.e. The raw data is going to lie to you. It may obscure hardware, circuit, &amp; environment issues thus making it impossible to support you accurately or confidently. Values of &lt;= 50 usecs will probably be safe. 51 - 100 usecs <b>might</b> be okay. 100 - 150 usecs is "Danger, Will Robinson!". 150 - 200 usecs expect broken protocols. At 200+ usecs, you <b>have</b> protocols you can't decode!! </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A boolean indicating if an IR message is ready or not. </dd></dl>
 
 </div>
 </div>
@@ -1538,6 +1673,54 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a675c45e6b32aaeca3de734ccf2f0c819"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a675c45e6b32aaeca3de734ccf2f0c819">&#9670;&nbsp;</a></span>decodeDoshisha()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IRrecv::decodeDoshisha </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdecode__results.html">decode_results</a> *&#160;</td>
+          <td class="paramname"><em>results</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>offset</em> = <code><a class="el" href="IRrecv_8h.html#a44a836a34428f8f75b1ae566de4bb972">kStartOffset</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint16_t&#160;</td>
+          <td class="paramname"><em>nbits</em> = <code><a class="el" href="IRremoteESP8266_8h.html#aedc53534cf6a40144be80abeee498362">kDoshishaBits</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>strict</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ad3a7be8afc36451c8e28e27f3c3e9aaa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad3a7be8afc36451c8e28e27f3c3e9aaa">&#9670;&nbsp;</a></span>decodeElectraAC()</h2>
 
@@ -1945,6 +2128,10 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Decode any arbitrary IR message into a 32-bit code value. Instead of decoding using a standard encoding scheme (e.g. Sony, NEC, RC5), the code is hashed to a 32-bit value. </p>
+<p>The algorithm: look at the sequence of MARK signals, and see if each one is shorter (0), the same length (1), or longer (2) than the previous. Do the same with the SPACE signals. Hash the resulting sequence of 0's, 1's, and 2's to a 32-bit value. This will give a unique value for each different code (probably), for most code systems. </p><dl class="section see"><dt>See also</dt><dd><a href="http://arcfn.com/2010/01/using-arbitrary-remotes-with-arduino.html">http://arcfn.com/2010/01/using-arbitrary-remotes-with-arduino.html</a> </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This isn't a "real" decoding, just an arbitrary value. Hopefully this code is unique for each button. </dd></dl>
 
 </div>
 </div>
@@ -2850,6 +3037,54 @@ Private Attributes</h2></td></tr>
           <td></td>
           <td class="paramtype">const uint16_t&#160;</td>
           <td class="paramname"><em>nbits</em> = <code><a class="el" href="IRremoteESP8266_8h.html#ab973b35583dabc7e04b12018fac04cc9">kMitsubishiHeavy152Bits</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>strict</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af61afacc9865232643164ba824e665ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af61afacc9865232643164ba824e665ab">&#9670;&nbsp;</a></span>decodeMultibrackets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IRrecv::decodeMultibrackets </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdecode__results.html">decode_results</a> *&#160;</td>
+          <td class="paramname"><em>results</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>offset</em> = <code><a class="el" href="IRrecv_8h.html#a44a836a34428f8f75b1ae566de4bb972">kStartOffset</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint16_t&#160;</td>
+          <td class="paramname"><em>nbits</em> = <code><a class="el" href="IRremoteESP8266_8h.html#aad7be0971479839493615cafcd654fc1">kMultibracketsBits</a></code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -4052,6 +4287,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Stop collection of any received IR data. Disable any timers and interrupts. </p>
+
 </div>
 </div>
 <a id="a52c05ec6d8f3dbfb75f21f3b4fe7be3d"></a>
@@ -4070,6 +4307,14 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Set up and (re)start the IR capture mechanism. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pullup</td><td>A flag indicating should the GPIO use the internal pullup resistor. (Default: <code>false</code>. i.e. No.) </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a69ab02ea6823ccf18d1f6be87ca1b92e"></a>
@@ -4087,6 +4332,9 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Obtain the maximum number of entries possible in the capture buffer. i.e. It's size. </p>
+<dl class="section return"><dt>Returns</dt><dd>The size of the buffer that is in use by the object. </dd></dl>
 
 </div>
 </div>
@@ -4178,6 +4426,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Get the base tolerance percentage for matching incoming IR messages. </p>
+<dl class="section return"><dt>Returns</dt><dd>A integer percentage. </dd></dl>
+
 </div>
 </div>
 <a id="a8bc218dae714ab189a3da4fff269cdaa"></a>
@@ -4217,6 +4468,18 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Check if we match a pulse(measured) with the desired within +/-tolerance percent and/or +/- a fixed delta range. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">measured</td><td>The recorded period of the signal pulse. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">desired</td><td>The expected period (in usecs) we are matching against. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tolerance</td><td>A percentage expressed as an integer. e.g. 10 is 10%. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">delta</td><td>A non-scaling (+/-) error margin (in useconds). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A Boolean. true if it matches, false if it doesn't. </dd></dl>
 
 </div>
 </div>
@@ -4265,6 +4528,18 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Check if we match a pulse(measured) of at least desired within tolerance percent and/or a fixed delta margin. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">measured</td><td>The recorded period of the signal pulse. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">desired</td><td>The expected period (in usecs) we are matching against. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tolerance</td><td>A percentage expressed as an integer. e.g. 10 is 10%. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">delta</td><td>A non-scaling amount to reduce usecs by. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A Boolean. true if it matches, false if it doesn't. </dd></dl>
 
 </div>
 </div>
@@ -4356,6 +4631,25 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Match &amp; decode the typical data section of an IR message. The bytes are stored at result_ptr. The first byte in the result equates to the first byte encountered, and so on. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">data_ptr</td><td>A pointer to where we are at in the capture buffer. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">result_ptr</td><td>A ptr to where to start storing the bytes we decoded. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">remaining</td><td>The size of the capture buffer remaining. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nbytes</td><td>Nr. of data bytes we expect. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">onemark</td><td>Nr. of uSeconds in an expected mark signal for a '1' bit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">onespace</td><td>Nr. of uSecs in an expected space signal for a '1' bit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">zeromark</td><td>Nr. of uSecs in an expected mark signal for a '0' bit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">zerospace</td><td>Nr. of uSecs in an expected space signal for a '0' bit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tolerance</td><td>Percentage error margin to allow. (Default: kUseDefTol) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">excess</td><td>Nr. of uSeconds. (Def: kMarkExcess) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">MSBfirst</td><td>Bit order to save the data in. (Def: true) true is Most Significant Bit First Order, false is Least Significant First </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If successful, how many buffer entries were used. Otherwise 0. </dd></dl>
+
 </div>
 </div>
 <a id="a5361439cb69b1069553544e486502d2e"></a>
@@ -4433,6 +4727,23 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Match &amp; decode the typical data section of an IR message. The data value is stored in the least significant bits reguardless of the bit ordering requested. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">data_ptr</td><td>A pointer to where we are at in the capture buffer. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nbits</td><td>Nr. of data bits we expect. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">onemark</td><td>Nr. of uSeconds in an expected mark signal for a '1' bit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">onespace</td><td>Nr. of uSecs in an expected space signal for a '1' bit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">zeromark</td><td>Nr. of uSecs in an expected mark signal for a '0' bit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">zerospace</td><td>Nr. of uSecs in an expected space signal for a '0' bit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tolerance</td><td>Percentage error margin to allow. (Default: kUseDefTol) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">excess</td><td>Nr. of uSeconds. (Def: kMarkExcess) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">MSBfirst</td><td>Bit order to save the data in. (Def: true) true is Most Significant Bit First Order, false is Least Significant First </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="structmatch__result__t.html" title="Results from a data match.">match_result_t</a> structure containing the success (or not), the data value, and how many buffer entries were used. </dd></dl>
 
 </div>
 </div>
@@ -4554,6 +4865,31 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Match &amp; decode a generic/typical &lt;= 64bit IR message. The data is stored at result_ptr. </p>
+<dl class="section note"><dt>Note</dt><dd>Values of 0 for hdrmark, hdrspace, footermark, or footerspace mean skip that requirement.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">data_ptr</td><td>A pointer to where we are at in the capture buffer. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">result_ptr</td><td>A ptr to where to start storing the bits we decoded. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">remaining</td><td>The size of the capture buffer remaining. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nbits</td><td>Nr. of data bits we expect. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hdrmark</td><td>Nr. of uSeconds for the expected header mark signal. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hdrspace</td><td>Nr. of uSeconds for the expected header space signal. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">onemark</td><td>Nr. of uSeconds in an expected mark signal for a '1' bit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">onespace</td><td>Nr. of uSecs in an expected space signal for a '1' bit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">zeromark</td><td>Nr. of uSecs in an expected mark signal for a '0' bit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">zerospace</td><td>Nr. of uSecs in an expected space signal for a '0' bit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">footermark</td><td>Nr. of uSeconds for the expected footer mark signal. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">footerspace</td><td>Nr. of uSeconds for the expected footer space/gap signal. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">atleast</td><td>Is the match on the footerspace a matchAtLeast or matchSpace? </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tolerance</td><td>Percentage error margin to allow. (Default: kUseDefTol) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">excess</td><td>Nr. of uSeconds. (Def: kMarkExcess) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">MSBfirst</td><td>Bit order to save the data in. (Def: true) true is Most Significant Bit First Order, false is Least Significant First </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If successful, how many buffer entries were used. Otherwise 0. </dd></dl>
+
 </div>
 </div>
 <a id="a4448c1658383962d735353352987c9aa"></a>
@@ -4674,6 +5010,169 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Match &amp; decode a generic/typical &gt; 64bit IR message. The bytes are stored at result_ptr. The first byte in the result equates to the first byte encountered, and so on. </p>
+<dl class="section note"><dt>Note</dt><dd>Values of 0 for hdrmark, hdrspace, footermark, or footerspace mean skip that requirement. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">data_ptr</td><td>A pointer to where we are at in the capture buffer. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">result_ptr</td><td>A ptr to where to start storing the bytes we decoded. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">remaining</td><td>The size of the capture buffer remaining. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nbits</td><td>Nr. of data bits we expect. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hdrmark</td><td>Nr. of uSeconds for the expected header mark signal. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hdrspace</td><td>Nr. of uSeconds for the expected header space signal. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">onemark</td><td>Nr. of uSeconds in an expected mark signal for a '1' bit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">onespace</td><td>Nr. of uSecs in an expected space signal for a '1' bit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">zeromark</td><td>Nr. of uSecs in an expected mark signal for a '0' bit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">zerospace</td><td>Nr. of uSecs in an expected space signal for a '0' bit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">footermark</td><td>Nr. of uSeconds for the expected footer mark signal. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">footerspace</td><td>Nr. of uSeconds for the expected footer space/gap signal. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">atleast</td><td>Is the match on the footerspace a matchAtLeast or matchSpace? </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tolerance</td><td>Percentage error margin to allow. (Default: kUseDefTol) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">excess</td><td>Nr. of uSeconds. (Def: kMarkExcess) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">MSBfirst</td><td>Bit order to save the data in. (Def: true) true is Most Significant Bit First Order, false is Least Significant First </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If successful, how many buffer entries were used. Otherwise 0. </dd></dl>
+
+</div>
+</div>
+<a id="a4582d75ef1d11aee35fce86c38dcccf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4582d75ef1d11aee35fce86c38dcccf0">&#9670;&nbsp;</a></span>matchGenericConstBitTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t IRrecv::matchGenericConstBitTime </td>
+          <td>(</td>
+          <td class="paramtype">volatile uint16_t *&#160;</td>
+          <td class="paramname"><em>data_ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t *&#160;</td>
+          <td class="paramname"><em>result_ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint16_t&#160;</td>
+          <td class="paramname"><em>remaining</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint16_t&#160;</td>
+          <td class="paramname"><em>nbits</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint16_t&#160;</td>
+          <td class="paramname"><em>hdrmark</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint32_t&#160;</td>
+          <td class="paramname"><em>hdrspace</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint16_t&#160;</td>
+          <td class="paramname"><em>one</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint32_t&#160;</td>
+          <td class="paramname"><em>zero</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint16_t&#160;</td>
+          <td class="paramname"><em>footermark</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint32_t&#160;</td>
+          <td class="paramname"><em>footerspace</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>atleast</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>tolerance</em> = <code><a class="el" href="IRrecv_8h.html#a05025e8bd724ae2d0c7fea6e924ca84c">kUseDefTol</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int16_t&#160;</td>
+          <td class="paramname"><em>excess</em> = <code><a class="el" href="IRrecv_8h.html#a99bbffe986ad7ba86d2b11e75f4aa50e">kMarkExcess</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>MSBfirst</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Match &amp; decode a generic/typical constant bit time &lt;= 64bit IR message. The data is stored at result_ptr. </p>
+<dl class="section note"><dt>Note</dt><dd>Values of 0 for hdrmark, hdrspace, footermark, or footerspace mean skip that requirement. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">data_ptr</td><td>A pointer to where we are at in the capture buffer. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd><code>data_ptr</code> is assumed to be pointing to a "Mark", not a "Space". </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">remaining</td><td>The size of the capture buffer remaining. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nbits</td><td>Nr. of data bits we expect. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hdrmark</td><td>Nr. of uSeconds for the expected header mark signal. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hdrspace</td><td>Nr. of uSeconds for the expected header space signal. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">one</td><td>Nr. of uSeconds in an expected mark signal for a '1' bit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">zero</td><td>Nr. of uSeconds in an expected mark signal for a '0' bit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">footermark</td><td>Nr. of uSeconds for the expected footer mark signal. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">footerspace</td><td>Nr. of uSeconds for the expected footer space/gap signal. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">atleast</td><td>Is the match on the footerspace a matchAtLeast or matchSpace? </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tolerance</td><td>Percentage error margin to allow. (Default: kUseDefTol) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">excess</td><td>Nr. of uSeconds. (Def: kMarkExcess) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">MSBfirst</td><td>Bit order to save the data in. (Def: true) true is Most Significant Bit First Order, false is Least Significant First </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">GEThomas</td><td>Use G.E. Thomas (true) or IEEE 802.3 (false) convention? </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If successful, how many buffer entries were used. Otherwise 0. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Parameters one + zero add up to the total time for a bit. e.g. mark(one) + space(zero) is a <code>1</code>, mark(zero) + space(one) is a <code>0</code>. </dd></dl>
+
 </div>
 </div>
 <a id="ade70777ad0e047e11b99b03d8f5e3728"></a>
@@ -4725,7 +5224,7 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const uint16_t&#160;</td>
-          <td class="paramname"><em>clock_period</em>, </td>
+          <td class="paramname"><em>half_period</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -4782,6 +5281,37 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Match &amp; decode a Manchester Code &lt;= 64bit IR message. The data is stored at result_ptr. </p>
+<dl class="section note"><dt>Note</dt><dd>Values of 0 for hdrmark, hdrspace, footermark, or footerspace mean skip that requirement. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">data_ptr</td><td>A pointer to where we are at in the capture buffer. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd><code>data_ptr</code> is assumed to be pointing to a "Mark", not a "Space". </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">remaining</td><td>The size of the capture buffer remaining. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nbits</td><td>Nr. of data bits we expect. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hdrmark</td><td>Nr. of uSeconds for the expected header mark signal. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hdrspace</td><td>Nr. of uSeconds for the expected header space signal. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">half_period</td><td>Nr. of uSeconds for half the clock's period. i.e. 1/2 wavelength </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">footermark</td><td>Nr. of uSeconds for the expected footer mark signal. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">footerspace</td><td>Nr. of uSeconds for the expected footer space/gap signal. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">atleast</td><td>Is the match on the footerspace a matchAtLeast or matchSpace? </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tolerance</td><td>Percentage error margin to allow. (Default: kUseDefTol) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">excess</td><td>Nr. of uSeconds. (Def: kMarkExcess) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">MSBfirst</td><td>Bit order to save the data in. (Def: true) true is Most Significant Bit First Order, false is Least Significant First </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">GEThomas</td><td>Use G.E. Thomas (true) or IEEE 802.3 (false) convention? </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If successful, how many buffer entries were used. Otherwise 0. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a href="https://en.wikipedia.org/wiki/Manchester_code">https://en.wikipedia.org/wiki/Manchester_code</a> </dd>
+<dd>
+<a href="http://ww1.microchip.com/downloads/en/AppNotes/Atmel-9164-Manchester-Coding-Basics_Application-Note.pdf">http://ww1.microchip.com/downloads/en/AppNotes/Atmel-9164-Manchester-Coding-Basics_Application-Note.pdf</a> </dd></dl>
+
 </div>
 </div>
 <a id="ae78ef12b8194db5d3cb5a2605d29830d"></a>
@@ -4821,6 +5351,18 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Check if we match a mark signal(measured) with the desired within +/-tolerance percent, after an expected is excess is added. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">measured</td><td>The recorded period of the signal pulse. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">desired</td><td>The expected period (in usecs) we are matching against. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tolerance</td><td>A percentage expressed as an integer. e.g. 10 is 10%. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">delta</td><td>A non-scaling amount to reduce usecs by. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A Boolean. true if it matches, false if it doesn't. </dd></dl>
 
 </div>
 </div>
@@ -4862,6 +5404,18 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Check if we match a space signal(measured) with the desired within +/-tolerance percent, after an expected is excess is removed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">measured</td><td>The recorded period of the signal pulse. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">desired</td><td>The expected period (in usecs) we are matching against. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tolerance</td><td>A percentage expressed as an integer. e.g. 10 is 10%. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">delta</td><td>A non-scaling amount to reduce usecs by. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A Boolean. true if it matches, false if it doesn't. </dd></dl>
+
 </div>
 </div>
 <a id="a6b5beb7348d807d8d98ae929d005510e"></a>
@@ -4879,6 +5433,10 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Resume collection of received IR data. </p>
+<dl class="section note"><dt>Note</dt><dd>This is required if <code><a class="el" href="classIRrecv.html#aeaa5c07a8b46f8fbb982f996cc1f9f4b" title="Decodes the received IR message. If the interrupt state is saved, we will immediately resume waiting ...">decode()</a></code><code>is successful and</code>save_buffer` was not set when the class was instanciated. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classIRrecv.html" title="Class for receiving IR messages.">IRrecv</a> class constructor </dd></dl>
 
 </div>
 </div>
@@ -4898,6 +5456,14 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Set the base tolerance percentage for matching incoming IR messages. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">percent</td><td>An integer percentage. (0-100) </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a02693553aad1decd67bdae60402e48bf"></a>
@@ -4915,6 +5481,14 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Set the minimum length we will consider for reporting UNKNOWN message types. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>Min nr. of mark/space pulses required to be considered. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -4958,6 +5532,16 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Calculate the upper bound of the nr. of ticks. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">usecs</td><td>Nr. of uSeconds. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tolerance</td><td>Percent as an integer. e.g. 10 is 10% </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">delta</td><td>A non-scaling amount to increase usecs by. @eturn Nr. of ticks. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="ac08e50c5eec10c0095157f4bdd4051c8"></a>
@@ -4999,6 +5583,17 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Calculate the lower bound of the nr. of ticks. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">usecs</td><td>Nr. of uSeconds. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tolerance</td><td>Percent as an integer. e.g. 10 is 10% </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">delta</td><td>A non-scaling amount to reduce usecs by. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Nr. of ticks. </dd></dl>
 
 </div>
 </div>
@@ -5103,6 +5698,7 @@ Private Attributes</h2></td></tr>
 <li>src/<a class="el" href="ir__Delonghi_8cpp.html">ir_Delonghi.cpp</a></li>
 <li>src/<a class="el" href="ir__Denon_8cpp.html">ir_Denon.cpp</a></li>
 <li>src/<a class="el" href="ir__Dish_8cpp.html">ir_Dish.cpp</a></li>
+<li>src/<a class="el" href="ir__Doshisha_8cpp.html">ir_Doshisha.cpp</a></li>
 <li>src/<a class="el" href="ir__Electra_8cpp.html">ir_Electra.cpp</a></li>
 <li>src/<a class="el" href="ir__Epson_8cpp.html">ir_Epson.cpp</a></li>
 <li>src/<a class="el" href="ir__Fujitsu_8cpp.html">ir_Fujitsu.cpp</a></li>
@@ -5122,6 +5718,7 @@ Private Attributes</h2></td></tr>
 <li>src/<a class="el" href="ir__Midea_8cpp.html">ir_Midea.cpp</a></li>
 <li>src/<a class="el" href="ir__Mitsubishi_8cpp.html">ir_Mitsubishi.cpp</a></li>
 <li>src/<a class="el" href="ir__MitsubishiHeavy_8cpp.html">ir_MitsubishiHeavy.cpp</a></li>
+<li>src/<a class="el" href="ir__Multibrackets_8cpp.html">ir_Multibrackets.cpp</a></li>
 <li>src/<a class="el" href="ir__MWM_8cpp.html">ir_MWM.cpp</a></li>
 <li>src/<a class="el" href="ir__NEC_8cpp.html">ir_NEC.cpp</a></li>
 <li>src/<a class="el" href="ir__Neoclima_8cpp.html">ir_Neoclima.cpp</a></li>
@@ -5141,6 +5738,7 @@ Private Attributes</h2></td></tr>
 <li>src/<a class="el" href="ir__Vestel_8cpp.html">ir_Vestel.cpp</a></li>
 <li>src/<a class="el" href="ir__Whirlpool_8cpp.html">ir_Whirlpool.cpp</a></li>
 <li>src/<a class="el" href="ir__Whynter_8cpp.html">ir_Whynter.cpp</a></li>
+<li>src/<a class="el" href="IRrecv_8cpp.html">IRrecv.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
