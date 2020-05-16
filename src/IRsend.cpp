@@ -65,7 +65,7 @@ void IRsend::ledOn() {
 }
 
 /// Calculate the period for a given frequency.
-/// @param[in] freq Frequency in Hz.
+/// @param[in] hz Frequency in Hz.
 /// @param[in] use_offset Should we use the calculated offset or not?
 /// @return nr. of uSeconds.
 /// @note (T = 1/f)
@@ -83,7 +83,7 @@ uint32_t IRsend::calcUSecPeriod(uint32_t hz, bool use_offset) {
 /// Set the output frequency modulation and duty cycle.
 /// @param[in] freq The freq we want to modulate at.
 ///  Assumes < 1000 means kHz else Hz.
-/// @param[in] dutycycle Percentage duty cycle of the LED.
+/// @param[in] duty Percentage duty cycle of the LED.
 ///   e.g. 25 = 25% = 1/4 on, 3/4 off.
 ///   If you are not sure, try 50 percent.
 ///   This is ignored if modulation is disabled at object instantiation.
@@ -131,7 +131,6 @@ void IRsend::_delayMicroseconds(uint32_t usec) {
 #else  // ALLOW_DELAY_CALLS
 /// A version of delayMicroseconds() that handles large values and does NOT use
 /// the watch-dog friendly delay() calls where appropriate.
-/// @param[in] usec Nr. of uSeconds to delay for.
 /// @note Use this only if you know what you are doing as it may cause the WDT
 ///  to reset the ESP8266.
 void IRsend::_delayMicroseconds(uint32_t usec) {

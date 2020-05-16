@@ -126,8 +126,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a204eedc3ad182fb2f40c42ef58f78cfc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRsend.html#a204eedc3ad182fb2f40c42ef58f78cfc">send</a> (const <a class="el" href="IRremoteESP8266_8h.html#ad5b287a488a8c1b7b8661f029ab56fad">decode_type_t</a> type, const uint64_t data, const uint16_t nbits, const uint16_t repeat=<a class="el" href="IRremoteESP8266_8h.html#a1a49dde7ffbd753f7756cf0c9dc6d826">kNoRepeat</a>)</td></tr>
 <tr class="memdesc:a204eedc3ad182fb2f40c42ef58f78cfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a simple (up to 64 bits) IR message of a given type. An unknown/unsupported type will send nothing.  <a href="classIRsend.html#a204eedc3ad182fb2f40c42ef58f78cfc">More...</a><br /></td></tr>
 <tr class="separator:a204eedc3ad182fb2f40c42ef58f78cfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a273e02ee5f3166c86324452f74c4a5c0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRsend.html#a273e02ee5f3166c86324452f74c4a5c0">send</a> (const <a class="el" href="IRremoteESP8266_8h.html#ad5b287a488a8c1b7b8661f029ab56fad">decode_type_t</a> type, const uint8_t state[], const uint16_t nbytes)</td></tr>
-<tr class="separator:a273e02ee5f3166c86324452f74c4a5c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a828e0efbf7cbeee10da0d425baa90fb4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRsend.html#a828e0efbf7cbeee10da0d425baa90fb4">send</a> (const <a class="el" href="IRremoteESP8266_8h.html#ad5b287a488a8c1b7b8661f029ab56fad">decode_type_t</a> type, const unsigned char *state, const uint16_t nbytes)</td></tr>
+<tr class="memdesc:a828e0efbf7cbeee10da0d425baa90fb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a complex (&gt;= 64 bits) IR message of a given type. An unknown/unsupported type will send nothing.  <a href="classIRsend.html#a828e0efbf7cbeee10da0d425baa90fb4">More...</a><br /></td></tr>
+<tr class="separator:a828e0efbf7cbeee10da0d425baa90fb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a324c9e455c0bae51ebe9bc07e915c043"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRsend.html#a324c9e455c0bae51ebe9bc07e915c043">sendNEC</a> (uint64_t data, uint16_t nbits=<a class="el" href="IRremoteESP8266_8h.html#a65e03baf646815b4b02f943bdd74a097">kNECBits</a>, uint16_t repeat=<a class="el" href="IRremoteESP8266_8h.html#a1a49dde7ffbd753f7756cf0c9dc6d826">kNoRepeat</a>)</td></tr>
 <tr class="separator:a324c9e455c0bae51ebe9bc07e915c043"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2e1ce918e4e06b955c3d2a089ce189c"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRsend.html#ab2e1ce918e4e06b955c3d2a089ce189c">encodeNEC</a> (uint16_t address, uint16_t command)</td></tr>
@@ -459,7 +460,6 @@ Private Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">usec</td><td>Nr. of uSeconds to delay for.</td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">usec</td><td>Nr. of uSeconds to delay for. </td></tr>
   </table>
   </dd>
 </dl>
@@ -571,7 +571,7 @@ Private Attributes</h2></td></tr>
 <p>Calculate the period for a given frequency. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">freq</td><td>Frequency in Hz. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hz</td><td>Frequency in Hz. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">use_offset</td><td>Should we use the calculated offset or not? </td></tr>
   </table>
   </dd>
@@ -674,7 +674,7 @@ Private Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">freq</td><td>The freq we want to modulate at. Assumes &lt; 1000 means kHz else Hz. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">dutycycle</td><td>Percentage duty cycle of the LED. e.g. 25 = 25% = 1/4 on, 3/4 off. If you are not sure, try 50 percent. This is ignored if modulation is disabled at object instantiation. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">duty</td><td>Percentage duty cycle of the LED. e.g. 25 = 25% = 1/4 on, 3/4 off. If you are not sure, try 50 percent. This is ignored if modulation is disabled at object instantiation. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1303,8 +1303,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a273e02ee5f3166c86324452f74c4a5c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a273e02ee5f3166c86324452f74c4a5c0">&#9670;&nbsp;</a></span>send() <span class="overload">[2/2]</span></h2>
+<a id="a828e0efbf7cbeee10da0d425baa90fb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a828e0efbf7cbeee10da0d425baa90fb4">&#9670;&nbsp;</a></span>send() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1318,8 +1318,8 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const uint8_t&#160;</td>
-          <td class="paramname"><em>state</em>[], </td>
+          <td class="paramtype">const unsigned char *&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1334,6 +1334,17 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Send a complex (&gt;= 64 bits) IR message of a given type. An unknown/unsupported type will send nothing. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>Protocol number/type of the message you want to send. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">state</td><td>A pointer to the array of bytes that make up the state[]. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nbytes</td><td>How many bytes are in the state. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if it is a type we can attempt to send, false if not. </dd></dl>
 
 </div>
 </div>

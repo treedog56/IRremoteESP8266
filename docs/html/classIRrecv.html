@@ -393,6 +393,7 @@ Private Attributes</h2></td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">bufsize</td><td>Nr. of entries to have in the capture buffer. (Default: kRawBuf) </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">timeout</td><td>Nr. of milli-Seconds of no signal before we stop capturing data. (Default: kTimeoutMs) </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">save_buffer</td><td>Use a second (save) buffer to decode from. (Default: false) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">timer_num</td><td>Nr. of the ESP32 timer to use (0 to 3) (ESP32 Only) </td></tr>
   </table>
   </dd>
 </dl>
@@ -700,6 +701,7 @@ Private Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">oldval</td><td>Nr. of ticks. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">newval</td><td>Nr. of ticks. </td></tr>
   </table>
   </dd>
 </dl>
@@ -790,7 +792,8 @@ Private Attributes</h2></td></tr>
 <p>Remove or merge pulses in the capture buffer that are too short. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">results</td><td>Ptr to the <a class="el" href="classdecode__results.html" title="Results returned from the decoder.">decode_results</a> we are going to filter. @floor[in] Only allow values in the buffer large than this. (micro seconds) </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">results</td><td>Ptr to the <a class="el" href="classdecode__results.html" title="Results returned from the decoder.">decode_results</a> we are going to filter. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">floor</td><td>Only allow values in the buffer large than this. (in microSeconds) </td></tr>
   </table>
   </dd>
 </dl>
@@ -5154,6 +5157,7 @@ Private Attributes</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd><code>data_ptr</code> is assumed to be pointing to a "Mark", not a "Space". </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">result_ptr</td><td>A ptr to where to start storing the bits we decoded. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">remaining</td><td>The size of the capture buffer remaining. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">nbits</td><td>Nr. of data bits we expect. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">hdrmark</td><td>Nr. of uSeconds for the expected header mark signal. </td></tr>
@@ -5166,7 +5170,6 @@ Private Attributes</h2></td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">tolerance</td><td>Percentage error margin to allow. (Default: kUseDefTol) </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">excess</td><td>Nr. of uSeconds. (Def: kMarkExcess) </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">MSBfirst</td><td>Bit order to save the data in. (Def: true) true is Most Significant Bit First Order, false is Least Significant First </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">GEThomas</td><td>Use G.E. Thomas (true) or IEEE 802.3 (false) convention? </td></tr>
   </table>
   </dd>
 </dl>
@@ -5292,6 +5295,7 @@ Private Attributes</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd><code>data_ptr</code> is assumed to be pointing to a "Mark", not a "Space". </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">result_ptr</td><td>A ptr to where to start storing the bits we decoded. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">remaining</td><td>The size of the capture buffer remaining. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">nbits</td><td>Nr. of data bits we expect. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">hdrmark</td><td>Nr. of uSeconds for the expected header mark signal. </td></tr>
@@ -5358,7 +5362,7 @@ Private Attributes</h2></td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">measured</td><td>The recorded period of the signal pulse. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">desired</td><td>The expected period (in usecs) we are matching against. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">tolerance</td><td>A percentage expressed as an integer. e.g. 10 is 10%. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">delta</td><td>A non-scaling amount to reduce usecs by. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">excess</td><td>A non-scaling amount to reduce usecs by. </td></tr>
   </table>
   </dd>
 </dl>
@@ -5410,7 +5414,7 @@ Private Attributes</h2></td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">measured</td><td>The recorded period of the signal pulse. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">desired</td><td>The expected period (in usecs) we are matching against. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">tolerance</td><td>A percentage expressed as an integer. e.g. 10 is 10%. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">delta</td><td>A non-scaling amount to reduce usecs by. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">excess</td><td>A non-scaling amount to reduce usecs by. </td></tr>
   </table>
   </dd>
 </dl>
@@ -5537,10 +5541,11 @@ Private Attributes</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">usecs</td><td>Nr. of uSeconds. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">tolerance</td><td>Percent as an integer. e.g. 10 is 10% </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">delta</td><td>A non-scaling amount to increase usecs by. @eturn Nr. of ticks. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">delta</td><td>A non-scaling amount to increase usecs by. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>Nr. of ticks. </dd></dl>
 
 </div>
 </div>

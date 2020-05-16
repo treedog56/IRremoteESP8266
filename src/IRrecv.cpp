@@ -148,6 +148,7 @@ static void USE_IRAM_ATTR gpio_intr() {
 ///   capturing data. (Default: kTimeoutMs)
 /// @param[in] save_buffer Use a second (save) buffer to decode from.
 ///   (Default: false)
+/// @param[in] timer_num Nr. of the ESP32 timer to use (0 to 3) (ESP32 Only)
 /// @return An IRrecv class object.
 #if defined(ESP32)
 IRrecv::IRrecv(const uint16_t recvpin, const uint16_t bufsize,
@@ -342,7 +343,8 @@ uint8_t IRrecv::getTolerance(void) { return _tolerance; }
 #if ENABLE_NOISE_FILTER_OPTION
 /// Remove or merge pulses in the capture buffer that are too short.
 /// @param[in,out] results Ptr to the decode_results we are going to filter.
-/// @floor[in] Only allow values in the buffer large than this. (micro seconds)
+/// @param[in] floor Only allow values in the buffer large than this.
+///   (in microSeconds)
 void IRrecv::crudeNoiseFilter(decode_results *results, const uint16_t floor) {
   if (floor == 0) return;  // Nothing to do.
   const uint16_t kTickFloor = floor / kRawTick;
@@ -866,7 +868,7 @@ uint32_t IRrecv::ticksLow(const uint32_t usecs, const uint8_t tolerance,
 /// @param[in] usecs Nr. of uSeconds.
 /// @param[in] tolerance Percent as an integer. e.g. 10 is 10%
 /// @param[in] delta A non-scaling amount to increase usecs by.
-/// @eturn Nr. of ticks.
+/// @return Nr. of ticks.
 uint32_t IRrecv::ticksHigh(const uint32_t usecs, const uint8_t tolerance,
                            const uint16_t delta) {
   return ((uint32_t)(usecs * (1.0 + _validTolerance(tolerance) / 100.0)) + 1 +
@@ -951,7 +953,7 @@ bool IRrecv::matchAtLeast(uint32_t measured, uint32_t desired,
 /// @param[in] measured The recorded period of the signal pulse.
 /// @param[in] desired The expected period (in usecs) we are matching against.
 /// @param[in] tolerance A percentage expressed as an integer. e.g. 10 is 10%.
-/// @param[in] delta A non-scaling amount to reduce usecs by.
+/// @param[in] excess A non-scaling amount to reduce usecs by.
 /// @return A Boolean. true if it matches, false if it doesn't.
 bool IRrecv::matchMark(uint32_t measured, uint32_t desired, uint8_t tolerance,
                        int16_t excess) {
@@ -970,7 +972,7 @@ bool IRrecv::matchMark(uint32_t measured, uint32_t desired, uint8_t tolerance,
 /// @param[in] measured The recorded period of the signal pulse.
 /// @param[in] desired The expected period (in usecs) we are matching against.
 /// @param[in] tolerance A percentage expressed as an integer. e.g. 10 is 10%.
-/// @param[in] delta A non-scaling amount to reduce usecs by.
+/// @param[in] excess A non-scaling amount to reduce usecs by.
 /// @return A Boolean. true if it matches, false if it doesn't.
 bool IRrecv::matchSpace(uint32_t measured, uint32_t desired, uint8_t tolerance,
                         int16_t excess) {
@@ -987,6 +989,7 @@ bool IRrecv::matchSpace(uint32_t measured, uint32_t desired, uint8_t tolerance,
 #if DECODE_HASH
 /// Compare two tick values.
 /// @param[in] oldval Nr. of ticks.
+/// @param[in] newval Nr. of ticks.
 /// @return 0 if newval is shorter, 1 if it is equal, & 2 if it is longer.
 /// @note Use a tolerance of 20%
 uint16_t IRrecv::compare(const uint16_t oldval, const uint16_t newval) {
@@ -1314,7 +1317,7 @@ uint16_t IRrecv::matchGeneric(volatile uint16_t *data_ptr,
 ///   skip that requirement.
 /// @param[in] data_ptr A pointer to where we are at in the capture buffer.
 /// @note `data_ptr` is assumed to be pointing to a "Mark", not a "Space".
-//  @param[out] result_ptr A ptr to where to start storing the bits we decoded.
+/// @param[out] result_ptr A ptr to where to start storing the bits we decoded.
 /// @param[in] remaining The size of the capture buffer remaining.
 /// @param[in] nbits Nr. of data bits we expect.
 /// @param[in] hdrmark Nr. of uSeconds for the expected header mark signal.
@@ -1330,7 +1333,6 @@ uint16_t IRrecv::matchGeneric(volatile uint16_t *data_ptr,
 /// @param[in] excess Nr. of uSeconds. (Def: kMarkExcess)
 /// @param[in] MSBfirst Bit order to save the data in. (Def: true)
 ///   true is Most Significant Bit First Order, false is Least Significant First
-/// @param[in] GEThomas Use G.E. Thomas (true) or IEEE 802.3 (false) convention?
 /// @return If successful, how many buffer entries were used. Otherwise 0.
 /// @note Parameters one + zero add up to the total time for a bit.
 ///   e.g. mark(one) + space(zero) is a `1`, mark(zero) + space(one) is a `0`.
@@ -1401,7 +1403,7 @@ uint16_t IRrecv::matchGenericConstBitTime(volatile uint16_t *data_ptr,
 ///   skip that requirement.
 /// @param[in] data_ptr A pointer to where we are at in the capture buffer.
 /// @note `data_ptr` is assumed to be pointing to a "Mark", not a "Space".
-//  @param[out] result_ptr A ptr to where to start storing the bits we decoded.
+/// @param[out] result_ptr A ptr to where to start storing the bits we decoded.
 /// @param[in] remaining The size of the capture buffer remaining.
 /// @param[in] nbits Nr. of data bits we expect.
 /// @param[in] hdrmark Nr. of uSeconds for the expected header mark signal.

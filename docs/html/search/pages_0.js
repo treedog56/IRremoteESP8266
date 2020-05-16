@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['internationalisation_20_28i18n_29_20_26_20locale_20files_6733',['Internationalisation (I18N) &amp; Locale Files',['../md_src_locale_README.html',1,'']]]
+  ['deprecated_20list_6734',['Deprecated List',['../deprecated.html',1,'']]]
 ];

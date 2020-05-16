@@ -93,12 +93,13 @@ var searchData=
   ['delonghi_5fac_200',['DELONGHI_AC',['../IRremoteESP8266_8h.html#ad5b287a488a8c1b7b8661f029ab56fada149190c9dec98e9c3f4a2bd530b154a3',1,'IRremoteESP8266.h']]],
   ['delonghiac_201',['delonghiac',['../classIRac.html#af290b0b08cff5121bb88c62051ed1074',1,'IRac']]],
   ['denon_202',['DENON',['../IRremoteESP8266_8h.html#ad5b287a488a8c1b7b8661f029ab56fada2bda37b76abb290d1675c3e027e3c2e1',1,'IRremoteESP8266.h']]],
-  ['dg11j13a_203',['DG11J13A',['../IRsend_8h.html#ab4e3ebf2fdf3c6a46da89a3e6ebcd2e2a868d69f0605cf9151b0163a3481e2fb9',1,'IRsend.h']]],
-  ['dg11j191_204',['DG11J191',['../IRsend_8h.html#ab4e3ebf2fdf3c6a46da89a3e6ebcd2e2adaecfc16f36975f231db2507a8a36c0c',1,'IRsend.h']]],
-  ['disableirin_205',['disableIRIn',['../classIRrecv.html#a9f4a719e756ad78c7dd47186f8bef087',1,'IRrecv']]],
-  ['disableofftimer_206',['disableOffTimer',['../classIRDaikinESP.html#a1e4e05ad0799002d0ab25db92dcaac06',1,'IRDaikinESP::disableOffTimer()'],['../classIRDaikin2.html#a6c8ad4c34713d61942c80b6052e6283a',1,'IRDaikin2::disableOffTimer()']]],
-  ['disableontimer_207',['disableOnTimer',['../classIRDaikinESP.html#a0733e4a15d76baac23493926ef1765b1',1,'IRDaikinESP::disableOnTimer()'],['../classIRDaikin2.html#ab0e77969a86af9637cb9aa4b4befd4aa',1,'IRDaikin2::disableOnTimer()']]],
-  ['disablesleeptimer_208',['disableSleepTimer',['../classIRDaikin2.html#a5461cf51967d3fe67489384c82daac47',1,'IRDaikin2']]],
-  ['dish_209',['DISH',['../IRremoteESP8266_8h.html#ad5b287a488a8c1b7b8661f029ab56fadac27c6ac38ba872593af8e46ac2fdc85a',1,'IRremoteESP8266.h']]],
-  ['doshisha_210',['DOSHISHA',['../IRremoteESP8266_8h.html#ad5b287a488a8c1b7b8661f029ab56fadab4566b260773b60c85450f40fa5b4341',1,'IRremoteESP8266.h']]]
+  ['deprecated_20list_203',['Deprecated List',['../deprecated.html',1,'']]],
+  ['dg11j13a_204',['DG11J13A',['../IRsend_8h.html#ab4e3ebf2fdf3c6a46da89a3e6ebcd2e2a868d69f0605cf9151b0163a3481e2fb9',1,'IRsend.h']]],
+  ['dg11j191_205',['DG11J191',['../IRsend_8h.html#ab4e3ebf2fdf3c6a46da89a3e6ebcd2e2adaecfc16f36975f231db2507a8a36c0c',1,'IRsend.h']]],
+  ['disableirin_206',['disableIRIn',['../classIRrecv.html#a9f4a719e756ad78c7dd47186f8bef087',1,'IRrecv']]],
+  ['disableofftimer_207',['disableOffTimer',['../classIRDaikinESP.html#a1e4e05ad0799002d0ab25db92dcaac06',1,'IRDaikinESP::disableOffTimer()'],['../classIRDaikin2.html#a6c8ad4c34713d61942c80b6052e6283a',1,'IRDaikin2::disableOffTimer()']]],
+  ['disableontimer_208',['disableOnTimer',['../classIRDaikinESP.html#a0733e4a15d76baac23493926ef1765b1',1,'IRDaikinESP::disableOnTimer()'],['../classIRDaikin2.html#ab0e77969a86af9637cb9aa4b4befd4aa',1,'IRDaikin2::disableOnTimer()']]],
+  ['disablesleeptimer_209',['disableSleepTimer',['../classIRDaikin2.html#a5461cf51967d3fe67489384c82daac47',1,'IRDaikin2']]],
+  ['dish_210',['DISH',['../IRremoteESP8266_8h.html#ad5b287a488a8c1b7b8661f029ab56fadac27c6ac38ba872593af8e46ac2fdc85a',1,'IRremoteESP8266.h']]],
+  ['doshisha_211',['DOSHISHA',['../IRremoteESP8266_8h.html#ad5b287a488a8c1b7b8661f029ab56fadab4566b260773b60c85450f40fa5b4341',1,'IRremoteESP8266.h']]]
 ];
