@@ -74,39 +74,57 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Class for sending all basic IR protocols.  
+ <a href="classIRsend.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="IRsend_8h_source.html">IRsend.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a792780b7de996c90c86dd7b700eaf271"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRsend.html#a792780b7de996c90c86dd7b700eaf271">IRsend</a> (uint16_t IRsendPin, bool inverted=false, bool use_modulation=true)</td></tr>
+<tr class="memdesc:a792780b7de996c90c86dd7b700eaf271"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for an <a class="el" href="classIRsend.html" title="Class for sending all basic IR protocols.">IRsend</a> object.  <a href="classIRsend.html#a792780b7de996c90c86dd7b700eaf271">More...</a><br /></td></tr>
 <tr class="separator:a792780b7de996c90c86dd7b700eaf271"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a386f026bf739b0718efde4cffa6ce129"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRsend.html#a386f026bf739b0718efde4cffa6ce129">begin</a> ()</td></tr>
+<tr class="memdesc:a386f026bf739b0718efde4cffa6ce129"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable the pin for output.  <a href="classIRsend.html#a386f026bf739b0718efde4cffa6ce129">More...</a><br /></td></tr>
 <tr class="separator:a386f026bf739b0718efde4cffa6ce129"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3b6d36c9b5d26c400526717d433ed2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRsend.html#ab3b6d36c9b5d26c400526717d433ed2d">enableIROut</a> (uint32_t freq, uint8_t duty=<a class="el" href="IRsend_8h.html#affa33c170fe058b783372852fca7cc5b">kDutyDefault</a>)</td></tr>
+<tr class="memdesc:ab3b6d36c9b5d26c400526717d433ed2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the output frequency modulation and duty cycle.  <a href="classIRsend.html#ab3b6d36c9b5d26c400526717d433ed2d">More...</a><br /></td></tr>
 <tr class="separator:ab3b6d36c9b5d26c400526717d433ed2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61ceb32aa53f538b93377b10e58b45c9"><td class="memItemLeft" align="right" valign="top">VIRTUAL void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRsend.html#a61ceb32aa53f538b93377b10e58b45c9">_delayMicroseconds</a> (uint32_t usec)</td></tr>
+<tr class="memdesc:a61ceb32aa53f538b93377b10e58b45c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">An ESP8266 RTOS watch-dog timer friendly version of delayMicroseconds().  <a href="classIRsend.html#a61ceb32aa53f538b93377b10e58b45c9">More...</a><br /></td></tr>
 <tr class="separator:a61ceb32aa53f538b93377b10e58b45c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7399389d40bfe24bc062ffca88fc3780"><td class="memItemLeft" align="right" valign="top">VIRTUAL uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRsend.html#a7399389d40bfe24bc062ffca88fc3780">mark</a> (uint16_t usec)</td></tr>
+<tr class="memdesc:a7399389d40bfe24bc062ffca88fc3780"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modulate the IR LED for the given period (usec) and at the duty cycle set.  <a href="classIRsend.html#a7399389d40bfe24bc062ffca88fc3780">More...</a><br /></td></tr>
 <tr class="separator:a7399389d40bfe24bc062ffca88fc3780"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0417b10d4e16718a87f8b2062a7d04a1"><td class="memItemLeft" align="right" valign="top">VIRTUAL void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRsend.html#a0417b10d4e16718a87f8b2062a7d04a1">space</a> (uint32_t usec)</td></tr>
+<tr class="memdesc:a0417b10d4e16718a87f8b2062a7d04a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn the pin (LED) off for a given time. Sends an IR space for the specified number of microseconds. A space is no output, so the PWM output is disabled.  <a href="classIRsend.html#a0417b10d4e16718a87f8b2062a7d04a1">More...</a><br /></td></tr>
 <tr class="separator:a0417b10d4e16718a87f8b2062a7d04a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1776aa6c699f9eeca1eef9bb4fe355b"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRsend.html#ad1776aa6c699f9eeca1eef9bb4fe355b">calibrate</a> (uint16_t hz=38000U)</td></tr>
+<tr class="memdesc:ad1776aa6c699f9eeca1eef9bb4fe355b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate &amp; set any offsets to account for execution times during sending.  <a href="classIRsend.html#ad1776aa6c699f9eeca1eef9bb4fe355b">More...</a><br /></td></tr>
 <tr class="separator:ad1776aa6c699f9eeca1eef9bb4fe355b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b9b84f828918f933bd1764d113b53f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRsend.html#a2b9b84f828918f933bd1764d113b53f8">sendRaw</a> (const uint16_t buf[], const uint16_t len, const uint16_t hz)</td></tr>
+<tr class="memdesc:a2b9b84f828918f933bd1764d113b53f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a raw IRremote message.  <a href="classIRsend.html#a2b9b84f828918f933bd1764d113b53f8">More...</a><br /></td></tr>
 <tr class="separator:a2b9b84f828918f933bd1764d113b53f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f8cd77dab7ce6c406029fe87674858f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRsend.html#a4f8cd77dab7ce6c406029fe87674858f">sendData</a> (uint16_t onemark, uint32_t onespace, uint16_t zeromark, uint32_t zerospace, uint64_t data, uint16_t nbits, bool MSBfirst=true)</td></tr>
+<tr class="memdesc:a4f8cd77dab7ce6c406029fe87674858f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generic method for sending data that is common to most protocols. Will send leading or trailing 0's if the nbits is larger than the number of bits in data.  <a href="classIRsend.html#a4f8cd77dab7ce6c406029fe87674858f">More...</a><br /></td></tr>
 <tr class="separator:a4f8cd77dab7ce6c406029fe87674858f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa76aa33785827c1278eb57d1c15236f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRsend.html#aa76aa33785827c1278eb57d1c15236f8">sendManchesterData</a> (const uint16_t half_period, const uint64_t data, const uint16_t nbits, const bool MSBfirst=true, const bool GEThomas=true)</td></tr>
+<tr class="memdesc:aa76aa33785827c1278eb57d1c15236f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generic method for sending Manchester code data. Will send leading or trailing 0's if the nbits is larger than the number of bits in data.  <a href="classIRsend.html#aa76aa33785827c1278eb57d1c15236f8">More...</a><br /></td></tr>
 <tr class="separator:aa76aa33785827c1278eb57d1c15236f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7862231cbb1d50f42996c25e2f05b93e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRsend.html#a7862231cbb1d50f42996c25e2f05b93e">sendManchester</a> (const uint16_t headermark, const uint32_t headerspace, const uint16_t half_period, const uint16_t footermark, const uint32_t gap, const uint64_t data, const uint16_t nbits, const uint16_t frequency=38, const bool MSBfirst=true, const uint16_t repeat=<a class="el" href="IRremoteESP8266_8h.html#a1a49dde7ffbd753f7756cf0c9dc6d826">kNoRepeat</a>, const uint8_t dutycycle=<a class="el" href="IRsend_8h.html#affa33c170fe058b783372852fca7cc5b">kDutyDefault</a>, const bool GEThomas=true)</td></tr>
+<tr class="memdesc:a7862231cbb1d50f42996c25e2f05b93e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generic method for sending Manchester code messages. Will send leading or trailing 0's if the nbits is larger than the number.  <a href="classIRsend.html#a7862231cbb1d50f42996c25e2f05b93e">More...</a><br /></td></tr>
 <tr class="separator:a7862231cbb1d50f42996c25e2f05b93e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5215fd797dfd490816f31bb99b38c273"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRsend.html#a5215fd797dfd490816f31bb99b38c273">sendGeneric</a> (const uint16_t headermark, const uint32_t headerspace, const uint16_t onemark, const uint32_t onespace, const uint16_t zeromark, const uint32_t zerospace, const uint16_t footermark, const uint32_t gap, const uint64_t data, const uint16_t nbits, const uint16_t frequency, const bool MSBfirst, const uint16_t repeat, const uint8_t dutycycle)</td></tr>
+<tr class="memdesc:a5215fd797dfd490816f31bb99b38c273"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generic method for sending simple protocol messages. Will send leading or trailing 0's if the nbits is larger than the number of bits in data.  <a href="classIRsend.html#a5215fd797dfd490816f31bb99b38c273">More...</a><br /></td></tr>
 <tr class="separator:a5215fd797dfd490816f31bb99b38c273"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaace48306af9c020c18848db1a05e641"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRsend.html#aaace48306af9c020c18848db1a05e641">sendGeneric</a> (const uint16_t headermark, const uint32_t headerspace, const uint16_t onemark, const uint32_t onespace, const uint16_t zeromark, const uint32_t zerospace, const uint16_t footermark, const uint32_t gap, const uint32_t mesgtime, const uint64_t data, const uint16_t nbits, const uint16_t frequency, const bool MSBfirst, const uint16_t repeat, const uint8_t dutycycle)</td></tr>
+<tr class="memdesc:aaace48306af9c020c18848db1a05e641"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generic method for sending simple protocol messages. Will send leading or trailing 0's if the nbits is larger than the number of bits in data.  <a href="classIRsend.html#aaace48306af9c020c18848db1a05e641">More...</a><br /></td></tr>
 <tr class="separator:aaace48306af9c020c18848db1a05e641"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f5ad649827692b4b42d15b45c7f684b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRsend.html#a4f5ad649827692b4b42d15b45c7f684b">sendGeneric</a> (const uint16_t headermark, const uint32_t headerspace, const uint16_t onemark, const uint32_t onespace, const uint16_t zeromark, const uint32_t zerospace, const uint16_t footermark, const uint32_t gap, const uint8_t *dataptr, const uint16_t nbytes, const uint16_t frequency, const bool MSBfirst, const uint16_t repeat, const uint8_t dutycycle)</td></tr>
+<tr class="memdesc:a4f5ad649827692b4b42d15b45c7f684b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generic method for sending simple protocol messages.  <a href="classIRsend.html#a4f5ad649827692b4b42d15b45c7f684b">More...</a><br /></td></tr>
 <tr class="separator:a4f5ad649827692b4b42d15b45c7f684b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a204eedc3ad182fb2f40c42ef58f78cfc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRsend.html#a204eedc3ad182fb2f40c42ef58f78cfc">send</a> (const <a class="el" href="IRremoteESP8266_8h.html#ad5b287a488a8c1b7b8661f029ab56fad">decode_type_t</a> type, const uint64_t data, const uint16_t nbits, const uint16_t repeat=<a class="el" href="IRremoteESP8266_8h.html#a1a49dde7ffbd753f7756cf0c9dc6d826">kNoRepeat</a>)</td></tr>
+<tr class="memdesc:a204eedc3ad182fb2f40c42ef58f78cfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a simple (up to 64 bits) IR message of a given type. An unknown/unsupported type will send nothing.  <a href="classIRsend.html#a204eedc3ad182fb2f40c42ef58f78cfc">More...</a><br /></td></tr>
 <tr class="separator:a204eedc3ad182fb2f40c42ef58f78cfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a273e02ee5f3166c86324452f74c4a5c0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRsend.html#a273e02ee5f3166c86324452f74c4a5c0">send</a> (const <a class="el" href="IRremoteESP8266_8h.html#ad5b287a488a8c1b7b8661f029ab56fad">decode_type_t</a> type, const uint8_t state[], const uint16_t nbytes)</td></tr>
 <tr class="separator:a273e02ee5f3166c86324452f74c4a5c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -309,15 +327,19 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ae02772f34180163861b7e4eb3520db2a"><td class="memItemLeft" align="right" valign="top">static uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRsend.html#ae02772f34180163861b7e4eb3520db2a">minRepeats</a> (const <a class="el" href="IRremoteESP8266_8h.html#ad5b287a488a8c1b7b8661f029ab56fad">decode_type_t</a> protocol)</td></tr>
+<tr class="memdesc:ae02772f34180163861b7e4eb3520db2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the minimum number of repeats for a given protocol.  <a href="classIRsend.html#ae02772f34180163861b7e4eb3520db2a">More...</a><br /></td></tr>
 <tr class="separator:ae02772f34180163861b7e4eb3520db2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70a2256bee8ad9b8ea8571dd4f26596f"><td class="memItemLeft" align="right" valign="top">static uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRsend.html#a70a2256bee8ad9b8ea8571dd4f26596f">defaultBits</a> (const <a class="el" href="IRremoteESP8266_8h.html#ad5b287a488a8c1b7b8661f029ab56fad">decode_type_t</a> protocol)</td></tr>
+<tr class="memdesc:a70a2256bee8ad9b8ea8571dd4f26596f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the default number of bits for a given protocol.  <a href="classIRsend.html#a70a2256bee8ad9b8ea8571dd4f26596f">More...</a><br /></td></tr>
 <tr class="separator:a70a2256bee8ad9b8ea8571dd4f26596f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:ae71cc5aa99f894785fb4f7abc05841b2"><td class="memItemLeft" align="right" valign="top">VIRTUAL void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRsend.html#ae71cc5aa99f894785fb4f7abc05841b2">ledOff</a> ()</td></tr>
+<tr class="memdesc:ae71cc5aa99f894785fb4f7abc05841b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn off the IR LED.  <a href="classIRsend.html#ae71cc5aa99f894785fb4f7abc05841b2">More...</a><br /></td></tr>
 <tr class="separator:ae71cc5aa99f894785fb4f7abc05841b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13d804171fa7c14aff4def38c6ffb6c8"><td class="memItemLeft" align="right" valign="top">VIRTUAL void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRsend.html#a13d804171fa7c14aff4def38c6ffb6c8">ledOn</a> ()</td></tr>
+<tr class="memdesc:a13d804171fa7c14aff4def38c6ffb6c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn on the IR LED.  <a href="classIRsend.html#a13d804171fa7c14aff4def38c6ffb6c8">More...</a><br /></td></tr>
 <tr class="separator:a13d804171fa7c14aff4def38c6ffb6c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
@@ -330,6 +352,7 @@ Protected Attributes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:ae9e68c0ed22e27c8f7ff82cec7ca3e33"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRsend.html#ae9e68c0ed22e27c8f7ff82cec7ca3e33">calcUSecPeriod</a> (uint32_t hz, bool use_offset=true)</td></tr>
+<tr class="memdesc:ae9e68c0ed22e27c8f7ff82cec7ca3e33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the period for a given frequency.  <a href="classIRsend.html#ae9e68c0ed22e27c8f7ff82cec7ca3e33">More...</a><br /></td></tr>
 <tr class="separator:ae9e68c0ed22e27c8f7ff82cec7ca3e33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46348c63f70b3e4c6ce2c995dc271699"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRsend.html#a46348c63f70b3e4c6ce2c995dc271699">_sendSony</a> (uint64_t data, uint16_t nbits, uint16_t repeat, uint16_t freq)</td></tr>
 <tr class="separator:a46348c63f70b3e4c6ce2c995dc271699"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -351,7 +374,10 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a11e26c03c87e2bed756eb7f318570bd8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRsend.html#a11e26c03c87e2bed756eb7f318570bd8">modulation</a></td></tr>
 <tr class="separator:a11e26c03c87e2bed756eb7f318570bd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class for sending all basic IR protocols. </p>
+<dl class="section note"><dt>Note</dt><dd>Originally from <a href="https://github.com/shirriff/Arduino-IRremote/">https://github.com/shirriff/Arduino-IRremote/</a> Updated by markszabo (<a href="https://github.com/crankyoldgit/IRremoteESP8266">https://github.com/crankyoldgit/IRremoteESP8266</a>) for sending IR code on ESP8266 </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a792780b7de996c90c86dd7b700eaf271"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a792780b7de996c90c86dd7b700eaf271">&#9670;&nbsp;</a></span>IRsend()</h2>
 
@@ -392,6 +418,23 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Constructor for an <a class="el" href="classIRsend.html" title="Class for sending all basic IR protocols.">IRsend</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">IRsendPin</td><td>Which GPIO pin to use when sending an IR command. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">inverted</td><td>Optional flag to invert the output. (default = false) e.g. LED is illuminated when GPIO is LOW rather than HIGH. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>Setting <code>inverted</code> to something other than the default could easily destroy your IR LED if you are overdriving it. Unless you <em>REALLY</em> know what you are doing, don't change this. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">use_modulation</td><td>Do we do frequency modulation during transmission? i.e. If not, assume a 100% duty cycle. Ignore attempts to change the duty cycle etc. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An <a class="el" href="classIRsend.html" title="Class for sending all basic IR protocols.">IRsend</a> object. </dd></dl>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -410,6 +453,17 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>An ESP8266 RTOS watch-dog timer friendly version of delayMicroseconds(). </p>
+<p>A version of delayMicroseconds() that handles large values and does NOT use the watch-dog friendly delay() calls where appropriate.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">usec</td><td>Nr. of uSeconds to delay for.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">usec</td><td>Nr. of uSeconds to delay for. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Use this only if you know what you are doing as it may cause the WDT to reset the ESP8266. </dd></dl>
 
 </div>
 </div>
@@ -476,6 +530,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Enable the pin for output. </p>
+
 </div>
 </div>
 <a id="ae9e68c0ed22e27c8f7ff82cec7ca3e33"></a>
@@ -512,6 +568,17 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Calculate the period for a given frequency. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">freq</td><td>Frequency in Hz. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">use_offset</td><td>Should we use the calculated offset or not? </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>nr. of uSeconds. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>(T = 1/f) </dd></dl>
+
 </div>
 </div>
 <a id="ad1776aa6c699f9eeca1eef9bb4fe355b"></a>
@@ -529,6 +596,16 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Calculate &amp; set any offsets to account for execution times during sending. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">hz</td><td>The frequency to calibrate at &gt;= 1000Hz. Default is 38000Hz. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The calculated period offset (in uSeconds) which is now in use. e.g. -5. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This will generate an 65535us <a class="el" href="classIRsend.html#a7399389d40bfe24bc062ffca88fc3780" title="Modulate the IR LED for the given period (usec) and at the duty cycle set.">mark()</a> IR LED signal. This only needs to be called once, if at all. </dd></dl>
 
 </div>
 </div>
@@ -555,6 +632,15 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Get the default number of bits for a given protocol. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">protocol</td><td>Protocol number/type you want the default bit size for. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of bits. </dd></dl>
 
 </div>
 </div>
@@ -583,6 +669,16 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Set the output frequency modulation and duty cycle. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">freq</td><td>The freq we want to modulate at. Assumes &lt; 1000 means kHz else Hz. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dutycycle</td><td>Percentage duty cycle of the LED. e.g. 25 = 25% = 1/4 on, 3/4 off. If you are not sure, try 50 percent. This is ignored if modulation is disabled at object instantiation. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Integer timing functions &amp; math mean we can't do fractions of microseconds timing. Thus minor changes to the freq &amp; duty values may have limited effect. You've been warned. </dd></dl>
 
 </div>
 </div>
@@ -1061,6 +1157,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Turn off the IR LED. </p>
+
 </div>
 </div>
 <a id="a13d804171fa7c14aff4def38c6ffb6c8"></a>
@@ -1086,6 +1184,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Turn on the IR LED. </p>
+
 </div>
 </div>
 <a id="a7399389d40bfe24bc062ffca88fc3780"></a>
@@ -1103,6 +1203,16 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Modulate the IR LED for the given period (usec) and at the duty cycle set. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">usec</td><td>The period of time to modulate the IR LED for, in microseconds. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Nr. of pulses actually sent. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The ESP8266 has no good way to do hardware PWM, so we have to do it all in software. There is a horrible kludge/brilliant hack to use the second serial TX line to do fairly accurate hardware PWM, but it is only available on a single specific GPIO and only available on some modules. e.g. It's not available on the ESP-01 module. Hence, for greater compatibility &amp; choice, we don't use that method. Ref: <a href="https://www.analysir.com/blog/2017/01/29/updated-esp8266-nodemcu-backdoor-upwm-hack-for-ir-signals/">https://www.analysir.com/blog/2017/01/29/updated-esp8266-nodemcu-backdoor-upwm-hack-for-ir-signals/</a> </dd></dl>
 
 </div>
 </div>
@@ -1129,6 +1239,15 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Get the minimum number of repeats for a given protocol. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">protocol</td><td>Protocol number/type of the message you want to send. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of repeats required. </dd></dl>
 
 </div>
 </div>
@@ -1169,6 +1288,18 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Send a simple (up to 64 bits) IR message of a given type. An unknown/unsupported type will send nothing. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>Protocol number/type of the message you want to send. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>The data you want to send (up to 64 bits). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nbits</td><td>How many bits long the message is to be. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">repeat</td><td>How many repeats to do? </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if it is a type we can attempt to send, false if not. </dd></dl>
 
 </div>
 </div>
@@ -1738,6 +1869,20 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Generic method for sending data that is common to most protocols. Will send leading or trailing 0's if the nbits is larger than the number of bits in data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">onemark</td><td>Nr. of usecs for the led to be pulsed for a '1' bit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">onespace</td><td>Nr. of usecs for the led to be fully off for a '1' bit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">zeromark</td><td>Nr. of usecs for the led to be pulsed for a '0' bit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">zerospace</td><td>Nr. of usecs for the led to be fully off for a '0' bit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>The data to be transmitted. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nbits</td><td>Nr. of bits of data to be sent. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">MSBfirst</td><td>Flag for bit transmission order. Defaults to MSB-&gt;LSB order. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a35dc18f9abbffa8da40816a8a9df1093"></a>
@@ -2110,6 +2255,29 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Generic method for sending simple protocol messages. Will send leading or trailing 0's if the nbits is larger than the number of bits in data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">headermark</td><td>Nr. of usecs for the led to be pulsed for the header mark. A value of 0 means no header mark. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">headerspace</td><td>Nr. of usecs for the led to be off after the header mark. A value of 0 means no header space. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">onemark</td><td>Nr. of usecs for the led to be pulsed for a '1' bit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">onespace</td><td>Nr. of usecs for the led to be fully off for a '1' bit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">zeromark</td><td>Nr. of usecs for the led to be pulsed for a '0' bit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">zerospace</td><td>Nr. of usecs for the led to be fully off for a '0' bit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">footermark</td><td>Nr. of usecs for the led to be pulsed for the footer mark. A value of 0 means no footer mark. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gap</td><td>Nr. of usecs for the led to be off after the footer mark. This is effectively the gap between messages. A value of 0 means no gap space. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesgtime</td><td>Min. nr. of usecs a single message needs to be. This is effectively the min. total length of a single message. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>The data to be transmitted. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nbits</td><td>Nr. of bits of data to be sent. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">frequency</td><td>The frequency we want to modulate at. (Hz/kHz) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">MSBfirst</td><td>Flag for bit transmission order. Defaults to MSB-&gt;LSB order. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">repeat</td><td>Nr. of extra times the message will be sent. e.g. 0 = 1 message sent, 1 = 1 initial + 1 repeat = 2 messages </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dutycycle</td><td>Percentage duty cycle of the LED. e.g. 25 = 25% = 1/4 on, 3/4 off. If you are not sure, try 50 percent. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Assumes a frequency &lt; 1000 means kHz otherwise it is in Hz. Most common value is 38000 or 38, for 38kHz. </dd></dl>
+
 </div>
 </div>
 <a id="a5215fd797dfd490816f31bb99b38c273"></a>
@@ -2210,6 +2378,28 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Generic method for sending simple protocol messages. Will send leading or trailing 0's if the nbits is larger than the number of bits in data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">headermark</td><td>Nr. of usecs for the led to be pulsed for the header mark. A value of 0 means no header mark. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">headerspace</td><td>Nr. of usecs for the led to be off after the header mark. A value of 0 means no header space. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">onemark</td><td>Nr. of usecs for the led to be pulsed for a '1' bit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">onespace</td><td>Nr. of usecs for the led to be fully off for a '1' bit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">zeromark</td><td>Nr. of usecs for the led to be pulsed for a '0' bit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">zerospace</td><td>Nr. of usecs for the led to be fully off for a '0' bit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">footermark</td><td>Nr. of usecs for the led to be pulsed for the footer mark. A value of 0 means no footer mark. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gap</td><td>Nr. of usecs for the led to be off after the footer mark. This is effectively the gap between messages. A value of 0 means no gap space. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>The data to be transmitted. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nbits</td><td>Nr. of bits of data to be sent. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">frequency</td><td>The frequency we want to modulate at. (Hz/kHz) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">MSBfirst</td><td>Flag for bit transmission order. Defaults to MSB-&gt;LSB order. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">repeat</td><td>Nr. of extra times the message will be sent. e.g. 0 = 1 message sent, 1 = 1 initial + 1 repeat = 2 messages </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dutycycle</td><td>Percentage duty cycle of the LED. e.g. 25 = 25% = 1/4 on, 3/4 off. If you are not sure, try 50 percent. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Assumes a frequency &lt; 1000 means kHz otherwise it is in Hz. Most common value is 38000 or 38, for 38kHz. </dd></dl>
+
 </div>
 </div>
 <a id="a4f5ad649827692b4b42d15b45c7f684b"></a>
@@ -2309,6 +2499,28 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Generic method for sending simple protocol messages. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">headermark</td><td>Nr. of usecs for the led to be pulsed for the header mark. A value of 0 means no header mark. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">headerspace</td><td>Nr. of usecs for the led to be off after the header mark. A value of 0 means no header space. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">onemark</td><td>Nr. of usecs for the led to be pulsed for a '1' bit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">onespace</td><td>Nr. of usecs for the led to be fully off for a '1' bit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">zeromark</td><td>Nr. of usecs for the led to be pulsed for a '0' bit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">zerospace</td><td>Nr. of usecs for the led to be fully off for a '0' bit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">footermark</td><td>Nr. of usecs for the led to be pulsed for the footer mark. A value of 0 means no footer mark. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gap</td><td>Nr. of usecs for the led to be off after the footer mark. This is effectively the gap between messages. A value of 0 means no gap space. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dataptr</td><td>Pointer to the data to be transmitted. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nbytes</td><td>Nr. of bytes of data to be sent. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">frequency</td><td>The frequency we want to modulate at. (Hz/kHz) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">MSBfirst</td><td>Flag for bit transmission order. Defaults to MSB-&gt;LSB order. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">repeat</td><td>Nr. of extra times the message will be sent. e.g. 0 = 1 message sent, 1 = 1 initial + 1 repeat = 2 messages </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dutycycle</td><td>Percentage duty cycle of the LED. e.g. 25 = 25% = 1/4 on, 3/4 off. If you are not sure, try 50 percent. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Assumes a frequency &lt; 1000 means kHz otherwise it is in Hz. Most common value is 38000 or 38, for 38kHz. </dd></dl>
 
 </div>
 </div>
@@ -3088,6 +3300,26 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Generic method for sending Manchester code messages. Will send leading or trailing 0's if the nbits is larger than the number. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">headermark</td><td>Nr. of usecs for the led to be pulsed for the header mark. A value of 0 means no header mark. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">headerspace</td><td>Nr. of usecs for the led to be off after the header mark. A value of 0 means no header space. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">half_period</td><td>Nr. of uSeconds for half the clock's period. (1/2 wavelength) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">footermark</td><td>Nr. of usecs for the led to be pulsed for the footer mark. A value of 0 means no footer mark. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gap</td><td>Min. nr. of usecs for the led to be off after the footer mark. This is effectively the absolute minimum gap between messages. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>The data to be transmitted. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nbits</td><td>Nr. of bits of data to be sent. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">frequency</td><td>The frequency we want to modulate at. (Hz/kHz) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">MSBfirst</td><td>Flag for bit transmission order. Defaults to MSB-&gt;LSB order. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">repeat</td><td>Nr. of extra times the message will be sent. e.g. 0 = 1 message sent, 1 = 1 initial + 1 repeat = 2 messages </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dutycycle</td><td>Percentage duty cycle of the LED. e.g. 25 = 25% = 1/4 on, 3/4 off. If you are not sure, try 50 percent. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">GEThomas</td><td>Use G.E. Thomas (true/default) or IEEE 802.3 (false). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Assumes a frequency &lt; 1000 means kHz otherwise it is in Hz. Most common value is 38000 or 38, for 38kHz. </dd></dl>
+
 </div>
 </div>
 <a id="aa76aa33785827c1278eb57d1c15236f8"></a>
@@ -3133,6 +3365,18 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Generic method for sending Manchester code data. Will send leading or trailing 0's if the nbits is larger than the number of bits in data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">half_period</td><td>Nr. of uSeconds for half the clock's period. (1/2 wavelength) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>The data to be transmitted. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nbits</td><td>Nr. of bits of data to be sent. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">MSBfirst</td><td>Flag for bit transmission order. Defaults to MSB-&gt;LSB order. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">GEThomas</td><td>Use G.E. Thomas (true/default) or IEEE 802.3 (false). </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -3785,6 +4029,17 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Send a raw IRremote message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">buf</td><td>An array of uint16_t's that has microseconds elements. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>Nr. of elements in the buf[] array. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hz</td><td>Frequency to send the message at. (kHz &lt; 1000; Hz &gt;= 1000) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Even elements are Mark times (On), Odd elements are Space times (Off). Ref: examples/IRrecvDumpV2/IRrecvDumpV2.ino </dd></dl>
 
 </div>
 </div>
@@ -4518,11 +4773,19 @@ Private Attributes</h2></td></tr>
           <td class="memname">void IRsend::space </td>
           <td>(</td>
           <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>usec</em></td><td>)</td>
+          <td class="paramname"><em>time</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Turn the pin (LED) off for a given time. Sends an IR space for the specified number of microseconds. A space is no output, so the PWM output is disabled. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">time</td><td>Time in microseconds (us). </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

@@ -153,6 +153,11 @@ enum lg_ac_remote_model_t {
 
 
 // Classes
+
+/// Class for sending all basic IR protocols.
+/// @note Originally from https://github.com/shirriff/Arduino-IRremote/
+///  Updated by markszabo (https://github.com/crankyoldgit/IRremoteESP8266) for
+///  sending IR code on ESP8266
 class IRsend {
  public:
   explicit IRsend(uint16_t IRsendPin, bool inverted = false,
