@@ -685,6 +685,8 @@ uint16_t IRsend::defaultBits(const decode_type_t protocol) {
       return 36;
     case CARRIER_AC40:
       return kCarrierAc40Bits;  // 40
+    case CARRIER_AC48:
+      return kCarrierAc48Bits;  // 48
     case DOSHISHA:
       return kDoshishaBits;  // 40
     case SANYO_LC7461:
@@ -1036,6 +1038,11 @@ bool IRsend::send(const decode_type_t type, const unsigned char *state,
       sendArgo(state, nbytes);
       break;
 #endif  // SEND_ARGO
+#if SEND_CARRIER_AC48
+    case CARRIER_AC48:
+      sendCarrier_AC48(state, nbytes);;
+      break;
+#endif  // SEND_CARRIER_AC48
 #if SEND_DAIKIN
     case DAIKIN:
       sendDaikin(state, nbytes);

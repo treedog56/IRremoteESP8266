@@ -390,6 +390,13 @@
 #define SEND_CARRIER_AC40      _IR_ENABLE_DEFAULT_
 #endif  // SEND_CARRIER_AC40
 
+#ifndef DECODE_CARRIER_AC48
+#define DECODE_CARRIER_AC48    _IR_ENABLE_DEFAULT_
+#endif  // DECODE_CARRIER_AC48
+#ifndef SEND_CARRIER_AC48
+#define SEND_CARRIER_AC48      _IR_ENABLE_DEFAULT_
+#endif  // SEND_CARRIER_AC48
+
 #ifndef DECODE_CARRIER_AC64
 #define DECODE_CARRIER_AC64    _IR_ENABLE_DEFAULT_
 #endif  // DECODE_CARRIER_AC64
@@ -635,7 +642,7 @@
 #define SEND_MULTIBRACKETS     _IR_ENABLE_DEFAULT_
 #endif  // SEND_MULTIBRACKETS
 
-#if (DECODE_ARGO || DECODE_DAIKIN || DECODE_FUJITSU_AC || DECODE_GREE || \
+#if (DECODE_ARGO || DECODE_CARRIER_AC48 || DECODE_DAIKIN || DECODE_FUJITSU_AC || DECODE_GREE || \
      DECODE_KELVINATOR || DECODE_MITSUBISHI_AC || DECODE_TOSHIBA_AC || \
      DECODE_TROTEC || DECODE_HAIER_AC || DECODE_HITACHI_AC || \
      DECODE_HITACHI_AC1 || DECODE_HITACHI_AC2 || DECODE_HAIER_AC_YRW02 || \
@@ -766,6 +773,7 @@ enum decode_type_t {
   DOSHISHA,
   MULTIBRACKETS,
   CARRIER_AC40,
+  CARRIER_AC48,
   CARRIER_AC64,
   // Add new entries before this one, and update it to point to the last entry.
   kLastDecodeType = CARRIER_AC64,
@@ -792,6 +800,9 @@ const uint16_t kCarrierAcBits = 32;
 const uint16_t kCarrierAcMinRepeat = kNoRepeat;
 const uint16_t kCarrierAc40Bits = 40;
 const uint16_t kCarrierAc40MinRepeat = 2;
+const uint16_t kCarrierAc48Bits = 96;
+const uint16_t kCarrierAC48StateLength = 12;
+const uint16_t kCarrierAc48MinRepeat = kNoRepeat;
 const uint16_t kCarrierAc64Bits = 64;
 const uint16_t kCarrierAc64MinRepeat = kNoRepeat;
 const uint16_t kDaikinStateLength = 35;
