@@ -737,8 +737,6 @@ uint16_t IRsend::defaultBits(const decode_type_t protocol) {
       return kHitachiAc2Bits;
     case HITACHI_AC3:
       return kHitachiAc3Bits;
-    case HITACHI_AC344:
-      return kHitachiAc344Bits;
     case HITACHI_AC424:
       return kHitachiAc424Bits;
     case KELVINATOR:

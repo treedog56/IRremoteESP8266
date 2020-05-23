@@ -782,15 +782,9 @@ enum decode_type_t {
   MULTIBRACKETS,
   CARRIER_AC40,
   CARRIER_AC64,
-<<<<<<< HEAD
   CARRIER_AC48,
   // Add new entries before this one, and update it to point to the last entry.
   kLastDecodeType = CARRIER_AC48,
-=======
-  HITACHI_AC344,  // 85
-  // Add new entries before this one, and update it to point to the last entry.
-  kLastDecodeType = HITACHI_AC344,
->>>>>>> dcb7adf2f90bc8b18a96383e90d1786d7f853375
 };
 
 // Message lengths & required repeat values
@@ -814,6 +808,8 @@ const uint16_t kCarrierAcBits = 32;
 const uint16_t kCarrierAcMinRepeat = kNoRepeat;
 const uint16_t kCarrierAc40Bits = 40;
 const uint16_t kCarrierAc40MinRepeat = 2;
+const uint16_t kCarrierAc48Bits = 48;
+const uint16_t kCarrierAc48MinRepeat = kNoRepeat;
 const uint16_t kCarrierAc64Bits = 64;
 const uint16_t kCarrierAc64MinRepeat = kNoRepeat;
 const uint16_t kDaikinStateLength = 35;
