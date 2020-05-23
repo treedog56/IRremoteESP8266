@@ -473,6 +473,7 @@ class IRsend {
 #if SEND_CARRIER_AC48
   void sendCarrier_AC48(const unsigned char data[], uint16_t nbits = kCarrierAc48Bits,
                        uint16_t repeat = kNoRepeat);
+#endif
 #if SEND_CARRIER_AC64
   void sendCarrierAC64(uint64_t data, uint16_t nbits = kCarrierAc64Bits,
                        uint16_t repeat = kCarrierAc64MinRepeat);
