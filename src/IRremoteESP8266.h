@@ -439,6 +439,13 @@
 #define SEND_HITACHI_AC3       _IR_ENABLE_DEFAULT_
 #endif  // SEND_HITACHI_AC3
 
+#ifndef DECODE_HITACHI_AC344
+#define DECODE_HITACHI_AC344   _IR_ENABLE_DEFAULT_
+#endif  // DECODE_HITACHI_AC344
+#ifndef SEND_HITACHI_AC344
+#define SEND_HITACHI_AC344     _IR_ENABLE_DEFAULT_
+#endif  // SEND_HITACHI_AC344
+
 #ifndef DECODE_HITACHI_AC424
 #define DECODE_HITACHI_AC424   _IR_ENABLE_DEFAULT_
 #endif  // DECODE_HITACHI_AC424
@@ -652,7 +659,8 @@
      DECODE_DAIKIN216 || DECODE_SHARP_AC || DECODE_DAIKIN160 || \
      DECODE_NEOCLIMA || DECODE_DAIKIN176 || DECODE_DAIKIN128 || \
      DECODE_AMCOR || DECODE_DAIKIN152 || DECODE_MITSUBISHI136 || \
-     DECODE_MITSUBISHI112 || DECODE_HITACHI_AC424 || DECODE_HITACHI_AC3)
+     DECODE_MITSUBISHI112 || DECODE_HITACHI_AC424 || DECODE_HITACHI_AC3 || \
+     DECODE_HITACHI_AC344)
 #define DECODE_AC true  // We need some common infrastructure for decoding A/Cs.
 #else
 #define DECODE_AC false   // We don't need that infrastructure.
@@ -773,10 +781,16 @@ enum decode_type_t {
   DOSHISHA,
   MULTIBRACKETS,
   CARRIER_AC40,
-  CARRIER_AC48,
   CARRIER_AC64,
+<<<<<<< HEAD
+  CARRIER_AC48,
   // Add new entries before this one, and update it to point to the last entry.
-  kLastDecodeType = CARRIER_AC64,
+  kLastDecodeType = CARRIER_AC48,
+=======
+  HITACHI_AC344,  // 85
+  // Add new entries before this one, and update it to point to the last entry.
+  kLastDecodeType = HITACHI_AC344,
+>>>>>>> dcb7adf2f90bc8b18a96383e90d1786d7f853375
 };
 
 // Message lengths & required repeat values
@@ -800,9 +814,6 @@ const uint16_t kCarrierAcBits = 32;
 const uint16_t kCarrierAcMinRepeat = kNoRepeat;
 const uint16_t kCarrierAc40Bits = 40;
 const uint16_t kCarrierAc40MinRepeat = 2;
-const uint16_t kCarrierAc48Bits = 96;
-const uint16_t kCarrierAC48StateLength = 12;
-const uint16_t kCarrierAc48MinRepeat = kNoRepeat;
 const uint16_t kCarrierAc64Bits = 64;
 const uint16_t kCarrierAc64MinRepeat = kNoRepeat;
 const uint16_t kDaikinStateLength = 35;
@@ -872,6 +883,8 @@ const uint16_t kHitachiAc3StateLength = 27;
 const uint16_t kHitachiAc3Bits = kHitachiAc3StateLength * 8;
 const uint16_t kHitachiAc3MinStateLength = 15;
 const uint16_t kHitachiAc3MinBits = kHitachiAc3MinStateLength * 8;
+const uint16_t kHitachiAc344StateLength = 43;
+const uint16_t kHitachiAc344Bits = kHitachiAc344StateLength * 8;
 const uint16_t kHitachiAc424StateLength = 53;
 const uint16_t kHitachiAc424Bits = kHitachiAc424StateLength * 8;
 const uint16_t kInaxBits = 24;

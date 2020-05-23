@@ -256,7 +256,11 @@ const PROGMEM char *kAllProtocolNamesStr =
     D_STR_DOSHISHA "\x0"
     D_STR_MULTIBRACKETS "\x0"
     D_STR_CARRIER_AC40 "\x0"
-    D_STR_CARRIER_AC48 "\x0"
     D_STR_CARRIER_AC64 "\x0"
+<<<<<<< HEAD
+    D_STR_CARRIER_AC48 "\x0" 
+=======
+    D_STR_HITACHI_AC344 "\x0"
+>>>>>>> dcb7adf2f90bc8b18a96383e90d1786d7f853375
     // New protocol strings should be added just above this line.
     "\x0";  // This string requires double null termination.
